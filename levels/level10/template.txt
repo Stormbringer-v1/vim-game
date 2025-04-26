@@ -1,0 +1,38 @@
+WELCOME TO LEVEL 10 — VISUAL MODE EDITING
+==========================================
+
+Goal: Select and fix text using Visual Mode!
+
+────────────────────────────────────────────
+1. Move to the line that says: SELECT_ME
+
+2. Press:
+      V
+
+   to select the whole line (Line Visual Mode).
+
+3. Delete the line:
+      d
+
+4. Move to the word OOPS in another line.
+
+5. Press:
+      v
+
+   to start character selection.
+
+6. Select the whole word (move cursor right), and then delete:
+      d
+
+7. Save and quit:
+      :wq
+
+────────────────────────────────────────────
+
+<<TASK>>
+This line is fine.
+SELECT_ME
+Another correct line.
+This line has an OOPS mistake.
+Goodbye!
+<<END>>
