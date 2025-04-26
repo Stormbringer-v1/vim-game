@@ -23,7 +23,11 @@ run_level() {
 
   # After exit, check depending on level
   case $LEVEL in
-    1)
+       0)
+      echo "🎉  Great job! You learned how to quit Vim!"
+      echo "level0=completed" >> progress.log
+      ;;
+   1)
       TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
       if echo "$TASK_CONTENT" | grep -q "DELEETE"; then
         echo "❌  Mission failed: The mistake is still there. Try again."
@@ -157,7 +161,9 @@ fi
 
 # ── Main logic ──
 while true; do
-if ! grep -q "level1=completed" progress.log; then
+if ! grep -q "level0=completed" progress.log; then
+  run_level 0
+elif ! grep -q "level1=completed" progress.log; then
   run_level 1
 elif ! grep -q "level2=completed" progress.log; then
   run_level 2
@@ -182,4 +188,5 @@ else
   echo "🎉 Congratulations! You finished all available levels!"
   echo "If you want to start again, type './play.sh reset' "
 fi
+
 done 
