@@ -29,7 +29,7 @@ run_level() {
         echo "❌  Mission failed: The mistake is still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 1!"
-        echo "To continue run play.sh again"
+     #   echo "To continue run play.sh again"
         echo "level1=completed" >> progress.log
       fi
       ;;
@@ -39,7 +39,7 @@ run_level() {
         echo "❌  Mission failed: The noisy line is still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 2!"
-        echo "To continue run play.sh again"
+       # echo "To continue run play.sh again"
         echo "level2=completed" >> progress.log
       fi
       ;;
@@ -49,7 +49,7 @@ run_level() {
         echo "❌  Mission failed: The typo is still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 3!"
-        echo "To continue run play.sh again"
+       # echo "To continue run play.sh again"
         echo "level3=completed" >> progress.log
       fi
       ;;
@@ -59,7 +59,7 @@ run_level() {
         echo "❌  Mission failed: The typo is still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 4!"
-        echo "To continue run play.sh again"
+       # echo "To continue run play.sh again"
         echo "level4=completed" >> progress.log
       fi
       ;;
@@ -69,7 +69,7 @@ run_level() {
         echo "❌  Mission failed: You didn't clean up the unwanted line."
       else
         echo "🎉  Mission accomplished! You passed Level 5!"
-        echo "To continue run play.sh again"
+      # echo "To continue run play.sh again"
         echo "level5=completed" >> progress.log
       fi
       ;;
@@ -79,7 +79,7 @@ run_level() {
         echo "❌  Mission failed: Some mistakes are still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 6!"
-        echo "To continue run play.sh again"
+       # echo "To continue run play.sh again"
         echo "level6=completed" >> progress.log
       fi
       ;;
@@ -87,7 +87,7 @@ run_level() {
       if [[ -f mysecondfile.txt ]]; then
         if grep -q "This is my second file!" mysecondfile.txt; then
           echo "🎉  Mission accomplished! You passed Level 7!"
-          echo "To continue run play.sh again"
+       #   echo "To continue run play.sh again"
            echo "level7=completed" >> progress.log
           rm mysecondfile.txt  # Clean up afterward
         else
@@ -101,7 +101,7 @@ run_level() {
       if [[ -f otherside.txt ]]; then
         if grep -q "This is the other side!" otherside.txt; then
           echo "🎉  Mission accomplished! You passed Level 8!"
-          echo "To continue run play.sh again"
+        #  echo "To continue run play.sh again"
           echo "level8=completed" >> progress.log
           rm otherside.txt  # Clean up afterward
         else
@@ -118,7 +118,7 @@ run_level() {
         echo "❌  Mission failed: Some BAD LINEs are still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 9!"
-        echo "To continue run play.sh again"
+       # echo "To continue run play.sh again"
         echo "level9=completed" >> progress.log
       fi
       ;;
@@ -130,7 +130,7 @@ run_level() {
         echo "❌  Mission failed: The OOPS word is still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 10!"
-        echo "To continue run play.sh again"
+       # echo "To continue run play.sh again"
         echo "level10=completed" >> progress.log
       fi
       ;;
@@ -141,9 +141,22 @@ run_level() {
   esac
 
   rm "$TMP_FILE"
+
+# New: ask if continue
+read -p "👉 Do you want to continue to the next level? (y/N): " CONTINUE
+if [[ "$CONTINUE" == "y" || "$CONTINUE" == "Y" ]]; then
+  :
+else
+  echo "👋 See you next time! Exiting..."
+  exit 0
+fi
+
+
+
 }
 
 # ── Main logic ──
+while true; do
 if ! grep -q "level1=completed" progress.log; then
   run_level 1
 elif ! grep -q "level2=completed" progress.log; then
@@ -169,3 +182,4 @@ else
   echo "🎉 Congratulations! You finished all available levels!"
   echo "If you want to start again, type './play.sh reset' "
 fi
+done 
