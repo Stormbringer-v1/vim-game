@@ -1,0 +1,21 @@
+WELCOME TO LEVEL 5 — UNDO AND REDO
+==================================
+
+Goal: Undo the mistake that was made, then redo the correct change, then save and quit.
+
+────────────────────────────────────────────
+1. Notice that something wrong has been done already.
+
+2. Press `u` to undo the last change.
+
+3. Then press `<Ctrl> + r` to redo it.
+
+4. Save and quit by typing:
+    :wq <Enter>
+
+────────────────────────────────────────────
+
+<<TASK>>
+The quick brown fox jumps over the lazy dog.
+sdklfjskldfj (this line shouldn't be here!)
+<<END>>

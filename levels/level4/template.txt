@@ -1,0 +1,30 @@
+WELCOME TO LEVEL 4 — SEARCHING FOR TEXT
+=======================================
+
+Goal: Search for the misspelled word using `/`, fix it, then save and quit.
+
+────────────────────────────────────────────
+1. Press `/` to start a search.
+2. Type the word you are searching for:
+      /FAILD
+
+3. Press `<Enter>` to jump to it.
+
+4. Press `i` to enter INSERT mode.
+
+5. Correct the typo:
+    FAILD → FAILED
+
+6. Press `<ESC>` to leave INSERT mode.
+
+7. Save and quit by typing:
+    :wq <Enter>
+
+────────────────────────────────────────────
+
+<<TASK>>
+This is a regular line.
+Another good line here.
+There was a FAILD attempt here.
+Yet another proper sentence.
+<<END>>

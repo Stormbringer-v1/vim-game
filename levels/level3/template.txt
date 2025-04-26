@@ -1,0 +1,29 @@
+WELCOME TO LEVEL 3 — MOVING BETWEEN WORDS
+=========================================
+
+Goal: Move to the mistake using word motions (`w` or `b`), fix it, save and quit.
+
+────────────────────────────────────────────
+1. Move between words:
+    - Press `w` to jump forward by one word
+    - Press `b` to jump backward by one word
+
+2. Find the misspelled word:  MISTAEK
+
+3. Press `i` to enter INSERT mode.
+
+4. Fix the typo:  MISTAEK → MISTAKE
+
+5. Press <ESC> to leave INSERT mode.
+
+6. Save and quit by typing:
+    :wq <Enter>
+
+────────────────────────────────────────────
+
+
+<<TASK>>
+This is a simple sentence.
+Find the MISTAEK and correct it.
+Everything else is fine.
+<<END>>
