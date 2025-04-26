@@ -1,0 +1,25 @@
+WELCOME TO LEVEL 15 — ADVANCED GLOBAL COMMANDS
+==============================================
+
+Goal: Use :g to search for patterns and execute commands globally!
+
+────────────────────────────────────────────
+1. Notice that some lines are noisy: they say "REMOVE_ME".
+
+2. Remove all lines that contain REMOVE_ME using:
+      :g/REMOVE_ME/d
+
+3. Save and quit:
+      :wq
+
+────────────────────────────────────────────
+
+<<TASK>>
+This line is fine.
+REMOVE_ME this line should be gone.
+Another good line.
+REMOVE_ME remove this too.
+Yet another fine line.
+REMOVE_ME delete this one as well.
+End of the good file.
+<<END>>

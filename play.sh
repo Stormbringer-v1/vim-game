@@ -19,7 +19,20 @@ run_level() {
   TMP_FILE="$(mktemp -t vimlevel${LEVEL}.XXXXXX)"
 
   cp "$TEMPLATE" "$TMP_FILE"
+ # Launch Vim differently for cursed Level 13
+  if [[ "$LEVEL" == "13" ]]; then
+    echo "⚠️  WARNING: CURSED LEVEL AHEAD — No Arrows, No Backspace! ⚠️"
+    vim -c "set nomodeline" -c "set nocompatible" \
+        -c "noremap <Up> <Nop>" \
+        -c "noremap <Down> <Nop>" \
+        -c "noremap <Left> <Nop>" \
+        -c "noremap <Right> <Nop>" \
+        -c "noremap <BS> <Nop>" \
+        "$TMP_FILE"
+  else
   vim "$TMP_FILE"
+fi 
+
 
   # After exit, check depending on level
   case $LEVEL in
@@ -152,6 +165,73 @@ run_level() {
         echo "boss01=completed" >> progress.log
       fi
       ;;
+    11)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      if echo "$TASK_CONTENT" | grep -q "X"; then
+        echo "❌  Mission failed: The column of X's is still there. Try again."
+      else
+        echo "🎉  Mission accomplished! You passed Level 11!"
+        echo "level11=completed" >> progress.log
+      fi
+      ;;
+    12)
+      if [[ -f secondfile.txt ]]; then
+        if grep -q "This is the second buffer!" secondfile.txt && grep -q "This is the first buffer!" "$TMP_FILE"; then
+          echo "🎉  Mission accomplished! You passed Level 12!"
+          echo "level12=completed" >> progress.log
+          rm secondfile.txt  # Clean up afterwards
+        else
+          echo "❌  Mission failed: Content is missing or wrong. Try again."
+        fi
+      else
+        echo "❌  Mission failed: secondfile.txt was not created. Try again."
+      fi
+      ;;
+    13)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      if echo "$TASK_CONTENT" | grep -q "Thes\|smaple\|txt\|lcuk"; then
+        echo "❌  Mission failed: Some typos are still there. Try again."
+      else
+        echo "🎉  Mission accomplished! You survived the cursed Level 13!"
+        echo "level13=completed" >> progress.log
+      fi
+      ;;
+    14)
+      if [[ -f tabfile.txt ]]; then
+        if grep -q "This is a new tab!" tabfile.txt && grep -q "Back to the first tab!" "$TMP_FILE"; then
+          echo "🎉  Mission accomplished! You passed Level 14!"
+          echo "level14=completed" >> progress.log
+          rm tabfile.txt  # Clean up afterwards
+        else
+          echo "❌  Mission failed: Content is missing or wrong. Try again."
+        fi
+      else
+        echo "❌  Mission failed: tabfile.txt was not created. Try again."
+      fi
+      ;;
+    15)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      if echo "$TASK_CONTENT" | grep -q "REMOVE_ME"; then
+        echo "❌  Mission failed: Some noisy lines are still there. Try again."
+      else
+        echo "🎉  Mission accomplished! You passed Level 15!"
+        echo "level15=completed" >> progress.log
+      fi
+      ;;
+     16)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      FIRST_COUNT=$(echo "$TASK_CONTENT" | grep -c "First important line")
+      SECOND_COUNT=$(echo "$TASK_CONTENT" | grep -c "Second important line")
+
+      if [[ "$FIRST_COUNT" -ge 2 && "$SECOND_COUNT" -ge 2 ]]; then
+        echo "🎉  Mission accomplished! You passed Level 16!"
+        echo "level16=completed" >> progress.log
+      else
+        echo "❌  Mission failed: You didn't paste the lines correctly. Try again."
+      fi
+      ;;
+
+
 
 
 
@@ -203,6 +283,21 @@ elif ! grep -q "level10=completed" progress.log; then
   run_level 10
 elif ! grep -q "boss01=completed" progress.log; then
   run_level boss01
+elif ! grep -q "level11=completed" progress.log; then
+  run_level 11
+elif ! grep -q "level12=completed" progress.log; then
+  run_level 12
+elif ! grep -q "level13=completed" progress.log; then
+  run_level 13
+elif ! grep -q "level14=completed" progress.log; then
+  run_level 14
+elif ! grep -q "level15=completed" progress.log; then
+  run_level 15
+elif ! grep -q "level16=completed" progress.log; then
+  run_level 16
+
+
+
 
 else
   echo "🎉 Congratulations! You finished all available levels!"

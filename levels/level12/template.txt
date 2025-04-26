@@ -1,0 +1,33 @@
+WELCOME TO LEVEL 12 — WORKING WITH BUFFERS
+===========================================
+
+Goal: Open multiple files and switch between them using buffers!
+
+────────────────────────────────────────────
+1. Open a new file (another buffer):
+      :e secondfile.txt
+
+2. Enter INSERT mode (`i`) and write:
+      This is the second buffer!
+
+3. Save the file:
+      :w
+
+4. Switch back to the first buffer:
+      :bprev
+
+5. In the first file, write:
+      This is the first buffer!
+
+6. Save:
+      :w
+
+7. Quit Vim:
+      :q
+
+────────────────────────────────────────────
+
+<<TASK>>
+You are currently in the first file.
+Follow the instructions to create and edit two buffers!
+<<END>>
