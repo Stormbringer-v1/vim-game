@@ -97,7 +97,7 @@ run_level() {
         echo "❌  Mission failed: You didn't create the second file. Try again."
       fi
       ;;
-8)
+    8)
       if [[ -f otherside.txt ]]; then
         if grep -q "This is the other side!" otherside.txt; then
           echo "🎉  Mission accomplished! You passed Level 8!"
@@ -111,6 +111,17 @@ run_level() {
         echo "❌  Mission failed: You didn't create the split file. Try again."
       fi
       ;;
+    9)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      if echo "$TASK_CONTENT" | grep -q "BAD LINE"; then
+        echo "❌  Mission failed: Some BAD LINEs are still there. Try again."
+      else
+        echo "🎉  Mission accomplished! You passed Level 9!"
+        echo "To continue run play.sh again"        
+        echo "level9=completed" >> progress.log
+      fi
+      ;;
+
 
 
     *)
@@ -138,6 +149,8 @@ elif ! grep -q "level7=completed" progress.log; then
   run_level 7    
 elif ! grep -q "level8=completed" progress.log; then
   run_level 8  
+elif ! grep -q "level9=completed" progress.log; then
+  run_level 9
 else
   echo "🎉 Congratulations! You finished all available levels!"
   echo "If you want to start again, type './play.sh reset' "

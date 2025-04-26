@@ -1,0 +1,40 @@
+WELCOME TO LEVEL 9 — RECORDING MACROS
+======================================
+
+Goal: Record a macro to fix repeated problems, then replay it!
+
+────────────────────────────────────────────
+1. Notice there are multiple bad lines saying: BAD LINE.
+
+2. Start recording a macro in register **a**:
+      qa
+
+3. Inside recording:
+    - Move to the line with BAD LINE
+    - Press:
+         dd       (to delete it)
+    - Move down to the next BAD LINE if needed (j)
+
+4. Stop recording:
+      q
+
+5. Replay the macro:
+      @a
+
+6. Replay again (multiple times):
+      @@
+
+7. Save and quit:
+      :wq
+
+────────────────────────────────────────────
+
+<<TASK>>
+Good line.
+BAD LINE
+Good line.
+BAD LINE
+Good line.
+BAD LINE
+Good line.
+<<END>>
