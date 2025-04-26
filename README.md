@@ -27,3 +27,4 @@ We cover everything from:
    ```bash
    git clone https://github.com/Stormbringer-v1/vim-game.git
    cd vim-game
+   ./play.sh 
