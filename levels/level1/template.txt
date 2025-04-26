@@ -1,31 +1,17 @@
 WELCOME TO LEVEL 1 — VIM BASICS
 ===============================
 
-Goal: Fix the spelling mistake in the text, then save and quit.
+Goal: fix the spelling mistake below, then save & quit.
 
 ────────────────────────────────────────────
-1. Move the cursor using:
-      Arrow keys ← ↑ → ↓ 
-   (or try using h j k l if you feel adventurous!)
-
-2. Move the cursor onto the word "DELEETE".
-
-3. Press:
-      i
-   to enter INSERT mode (you'll see -- INSERT -- at the bottom).
-
-4. Fix the spelling mistake:
-   Change "DELEETE" → "DELETE".
-
-5. Press:
-      <ESC>
-   to exit INSERT mode.
-
-6. Save and quit by typing:
-      :wq <Enter>
-
+1. Move with ← ↑ → ↓  (or h j k l).
+2. Place the cursor on **DELEETE**.
+3. Press **i** to enter INSERT mode, use **Backspace** to
+   correct the word to **DELETE**, press <Esc>.
+4. Save & quit with  :wq  <Enter>.
 ────────────────────────────────────────────
 
-Here is the wrong word you need to fix:
 
+<<TASK>>
 DELEETE
+<<END>>

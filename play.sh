@@ -3,17 +3,18 @@ set -euo pipefail
 
 LEVEL_DIR="levels/level1"
 TEMPLATE="$LEVEL_DIR/template.txt"
-TMP_FILE="$(mktemp /tmp/vimlevel1.XXXX.txt)"
+TMP_FILE="$(mktemp -t vimlevel1.XXXXXX)"   # always unique
 
 cp "$TEMPLATE" "$TMP_FILE"
+vim "$TMP_FILE"
 
-vim -u NONE "$TMP_FILE"
+# ── check only the task block ─────────────────────────
+TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
 
-# Check if the word was corrected
-if grep -q "DELEETE" "$TMP_FILE"; then
-  echo "❌  Mission failed: The mistake is still there. Try again."
+if echo "$TASK_CONTENT" | grep -q "DELEETE"; then
+  echo "❌  Mission failed: the typo is still there. Try again."
 else
-  echo "🎉  Mission accomplished! You passed Level 1!"
+  echo "🎉  Mission accomplished!  You passed Level 1!"
   echo "level1=completed" >> progress.log
 fi
 
