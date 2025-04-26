@@ -111,18 +111,16 @@ run_level() {
         echo "❌  Mission failed: You didn't create the split file. Try again."
       fi
       ;;
+
     9)
       TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
       if echo "$TASK_CONTENT" | grep -q "BAD LINE"; then
         echo "❌  Mission failed: Some BAD LINEs are still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 9!"
-        echo "To continue run play.sh again"        
         echo "level9=completed" >> progress.log
       fi
       ;;
-
-
 
     *)
       echo "Unknown level!"
