@@ -139,6 +139,24 @@ run_level() {
       fi
       ;;
 
+    boss01)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      if echo "$TASK_CONTENT" | grep -q "NOISE_NOISE_NOISE"; then
+        echo "❌  Mission failed: Noisy lines are still there. Try again."
+      elif echo "$TASK_CONTENT" | grep -q "MISTAEK"; then
+        echo "❌  Mission failed: Typos are still there. Try again."
+      elif echo "$TASK_CONTENT" | grep -q "appple"; then
+        echo "❌  Mission failed: Spelling mistakes are still there. Try again."
+      else
+        echo "🎉🎉🎉  You conquered the Vim Boss Fight! You are a true Vim Wizard!"
+        echo "boss01=completed" >> progress.log
+      fi
+      ;;
+
+
+
+
+
     *)
       echo "Unknown level!"
       ;;
@@ -183,10 +201,13 @@ elif ! grep -q "level9=completed" progress.log; then
   run_level 9
 elif ! grep -q "level10=completed" progress.log; then
   run_level 10
+elif ! grep -q "boss01=completed" progress.log; then
+  run_level boss01
 
 else
   echo "🎉 Congratulations! You finished all available levels!"
   echo "If you want to start again, type './play.sh reset' "
+exit 0
 fi
 
 done 

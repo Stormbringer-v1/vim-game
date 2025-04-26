@@ -1,0 +1,31 @@
+FINAL CHALLENGE — VIM MASTERY EXAM
+==================================
+
+You have come far, young wizard. 🧙
+
+Now, you must prove your mastery.
+
+────────────────────────────────────────────
+Your mission:
+1. Delete noisy lines.
+2. Fix typos in multiple places.
+3. Search and replace all mistakes across file.
+4. Record a macro and apply it.
+5. Move quickly between sections.
+6. Use Visual Mode to clean blocks of text.
+7. Save and quit safely.
+
+────────────────────────────────────────────
+
+<<TASK>>
+This line is good.
+NOISE_NOISE_NOISE
+This sentence has a MISTAEK.
+This line needs cleaning.
+NOISE_NOISE_NOISE
+Another MISTAEK is hidden here.
+Some appple trees are not ripe.
+Good lines are here too.
+NOISE_NOISE_NOISE
+A final mistake with appple.
+<<END>>
