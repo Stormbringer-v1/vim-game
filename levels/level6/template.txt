@@ -1,0 +1,26 @@
+WELCOME TO LEVEL 6 — GLOBAL SEARCH & REPLACE
+============================================
+
+Goal: Replace ALL wrong words across the document using one command.
+
+────────────────────────────────────────────
+1. Notice that the wrong word "appple" is everywhere!
+
+2. Use this command inside Vim:
+    :%s/appple/apple/g
+
+3. (It means: for ALL lines (%), substitute (s), 'appple' with 'apple', globally (g)).
+
+4. Press <Enter> after typing the command.
+
+5. Save and quit:
+    :wq <Enter>
+
+────────────────────────────────────────────
+
+<<TASK>>
+I like green appple juice.
+Appple pies are the best.
+This appple doesn't look fresh.
+appples can be red, green, or yellow.
+<<END>>

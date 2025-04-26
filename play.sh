@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Check for special arguments
+if [[ "${1:-}" == "reset" ]]; then
+  echo "⚡ Resetting your game progress..."
+  rm -f progress.log
+  touch progress.log
+  echo "✅ Progress has been reset! Start again from Level 1."
+  exit 0
+fi
+
+
 # Helper function to run a level
 run_level() {
   local LEVEL=$1
@@ -58,6 +68,15 @@ run_level() {
         echo "level5=completed" >> progress.log
       fi
       ;;
+    6)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      if echo "$TASK_CONTENT" | grep -q "appple"; then
+        echo "❌  Mission failed: Some mistakes are still there. Try again."
+      else
+        echo "🎉  Mission accomplished! You passed Level 6!"
+        echo "level6=completed" >> progress.log
+      fi
+      ;;
     *)
       echo "Unknown level!"
       ;;
@@ -77,6 +96,9 @@ elif ! grep -q "level3=completed" progress.log; then
   run_level 4
 elif ! grep -q "level5=completed" progress.log; then
   run_level 5
+elif ! grep -q "level6=completed" progress.log; then
+  run_level 6  
 else
   echo "🎉 Congratulations! You finished all available levels!"
+  echo "If you want to start again, type './play.sh reset' "
 fi
