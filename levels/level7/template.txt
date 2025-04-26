@@ -1,0 +1,27 @@
+WELCOME TO LEVEL 7 — WORKING WITH MULTIPLE FILES
+===============================================
+
+Goal: Open another file inside Vim, add some text, save and quit.
+
+────────────────────────────────────────────
+1. Inside Vim, open a new file:
+      :e mysecondfile.txt
+
+2. Enter INSERT mode (`i`).
+
+3. Write a simple sentence:
+      This is my second file!
+
+4. Press <ESC>.
+
+5. Save the new file:
+      :w
+
+6. Then quit Vim:
+      :q
+
+────────────────────────────────────────────
+
+<<TASK>>
+Now open another file and write inside it.
+<<END>>

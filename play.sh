@@ -77,6 +77,20 @@ run_level() {
         echo "level6=completed" >> progress.log
       fi
       ;;
+    7)
+      if [[ -f mysecondfile.txt ]]; then
+        if grep -q "This is my second file!" mysecondfile.txt; then
+          echo "🎉  Mission accomplished! You passed Level 7!"
+          echo "level7=completed" >> progress.log
+          rm mysecondfile.txt  # Clean up afterward
+        else
+          echo "❌  Mission failed: The new file content is wrong. Try again."
+        fi
+      else
+        echo "❌  Mission failed: You didn't create the second file. Try again."
+      fi
+      ;;
+
     *)
       echo "Unknown level!"
       ;;
@@ -97,7 +111,9 @@ elif ! grep -q "level3=completed" progress.log; then
 elif ! grep -q "level5=completed" progress.log; then
   run_level 5
 elif ! grep -q "level6=completed" progress.log; then
-  run_level 6  
+  run_level 6
+elif ! grep -q "level7=completed" progress.log; then
+  run_level 7    
 else
   echo "🎉 Congratulations! You finished all available levels!"
   echo "If you want to start again, type './play.sh reset' "
