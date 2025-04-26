@@ -29,6 +29,7 @@ run_level() {
         echo "❌  Mission failed: The mistake is still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 1!"
+        echo "To continue run play.sh again"
         echo "level1=completed" >> progress.log
       fi
       ;;
@@ -38,6 +39,7 @@ run_level() {
         echo "❌  Mission failed: The noisy line is still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 2!"
+        echo "To continue run play.sh again"
         echo "level2=completed" >> progress.log
       fi
       ;;
@@ -47,6 +49,7 @@ run_level() {
         echo "❌  Mission failed: The typo is still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 3!"
+        echo "To continue run play.sh again"
         echo "level3=completed" >> progress.log
       fi
       ;;
@@ -56,6 +59,7 @@ run_level() {
         echo "❌  Mission failed: The typo is still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 4!"
+        echo "To continue run play.sh again"
         echo "level4=completed" >> progress.log
       fi
       ;;
@@ -65,6 +69,7 @@ run_level() {
         echo "❌  Mission failed: You didn't clean up the unwanted line."
       else
         echo "🎉  Mission accomplished! You passed Level 5!"
+        echo "To continue run play.sh again"
         echo "level5=completed" >> progress.log
       fi
       ;;
@@ -74,6 +79,7 @@ run_level() {
         echo "❌  Mission failed: Some mistakes are still there. Try again."
       else
         echo "🎉  Mission accomplished! You passed Level 6!"
+        echo "To continue run play.sh again"
         echo "level6=completed" >> progress.log
       fi
       ;;
@@ -81,7 +87,8 @@ run_level() {
       if [[ -f mysecondfile.txt ]]; then
         if grep -q "This is my second file!" mysecondfile.txt; then
           echo "🎉  Mission accomplished! You passed Level 7!"
-          echo "level7=completed" >> progress.log
+          echo "To continue run play.sh again"
+           echo "level7=completed" >> progress.log
           rm mysecondfile.txt  # Clean up afterward
         else
           echo "❌  Mission failed: The new file content is wrong. Try again."
@@ -90,6 +97,21 @@ run_level() {
         echo "❌  Mission failed: You didn't create the second file. Try again."
       fi
       ;;
+8)
+      if [[ -f otherside.txt ]]; then
+        if grep -q "This is the other side!" otherside.txt; then
+          echo "🎉  Mission accomplished! You passed Level 8!"
+          echo "To continue run play.sh again"
+          echo "level8=completed" >> progress.log
+          rm otherside.txt  # Clean up afterward
+        else
+          echo "❌  Mission failed: The new split file content is wrong. Try again."
+        fi
+      else
+        echo "❌  Mission failed: You didn't create the split file. Try again."
+      fi
+      ;;
+
 
     *)
       echo "Unknown level!"
@@ -114,6 +136,8 @@ elif ! grep -q "level6=completed" progress.log; then
   run_level 6
 elif ! grep -q "level7=completed" progress.log; then
   run_level 7    
+elif ! grep -q "level8=completed" progress.log; then
+  run_level 8  
 else
   echo "🎉 Congratulations! You finished all available levels!"
   echo "If you want to start again, type './play.sh reset' "

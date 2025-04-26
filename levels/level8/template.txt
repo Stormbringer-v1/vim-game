@@ -1,0 +1,32 @@
+WELCOME TO LEVEL 8 — SPLIT WINDOWS IN VIM
+=========================================
+
+Goal: Open a split window, open a new file inside it, and move between splits.
+
+────────────────────────────────────────────
+1. Press:
+      :split otherside.txt
+
+   This opens a horizontal split with a new file.
+
+2. Move between splits:
+      <Ctrl> + w  +  <Ctrl> + w
+
+   (Pressing `<Ctrl-w>` twice switches window.)
+
+3. Inside the new split, enter INSERT mode (`i`) and write:
+      This is the other side!
+
+4. Press <ESC>.
+
+5. Save the file:
+      :w
+
+6. Quit all splits:
+      :qa <Enter>
+
+────────────────────────────────────────────
+
+<<TASK>>
+Open another file using :split and write inside it.
+<<END>>
