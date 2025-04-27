@@ -1,0 +1,44 @@
+WELCOME TO LEVEL 17 — ADVANCED MACROS
+======================================
+
+Goal: Record a macro and apply it over multiple lines!
+
+────────────────────────────────────────────
+1. Move to the first line that says: "bad line".
+
+2. Start recording a macro into register **a**:
+      qa
+
+3. Inside the recording:
+    - Delete the bad line:
+         dd
+    - Move to the next line:
+         j
+
+4. Stop recording:
+      q
+
+5. Replay the macro:
+      @a
+
+6. Replay again and again:
+      @@
+      @@
+      @@
+
+(Or just spam @@ until all "bad line" entries are gone.)
+
+7. Save and quit:
+      :wq
+
+────────────────────────────────────────────
+
+<<TASK>>
+Good line.
+bad line
+bad line
+Good line.
+bad line
+bad line
+Good line.
+<<END>>

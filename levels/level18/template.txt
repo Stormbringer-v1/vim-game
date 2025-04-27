@@ -1,0 +1,42 @@
+WELCOME TO LEVEL 18 — VISUAL BLOCK + INSERT MODE
+=================================================
+
+Goal: Edit multiple lines at once using Visual Block Mode + Insert!
+
+────────────────────────────────────────────
+1. Move your cursor to the first empty line.
+
+2. Press:
+      <Ctrl> + v
+   to enter Visual Block Mode.
+
+3. Move down to select multiple empty lines.
+
+4. Press:
+      I
+
+5. Type:
+      [TODO] 
+
+6. Press <ESC>.
+
+All selected lines will now have "[TODO]" inserted at the beginning!
+
+7. Save and quit:
+      :wq
+
+────────────────────────────────────────────
+
+<<TASK>>
+
+Line to fix 1
+
+Line to fix 2
+
+Line to fix 3
+
+Line to fix 4
+
+Line to fix 5
+
+<<END>>

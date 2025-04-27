@@ -230,7 +230,24 @@ fi
         echo "❌  Mission failed: You didn't paste the lines correctly. Try again."
       fi
       ;;
-
+    17)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      if echo "$TASK_CONTENT" | grep -q "bad line"; then
+        echo "❌  Mission failed: Some bad lines are still there. Try again."
+      else
+        echo "🎉  Mission accomplished! You passed Level 17!"
+        echo "level17=completed" >> progress.log
+      fi
+      ;;
+    18)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      if echo "$TASK_CONTENT" | grep -qv "^\[TODO\]"; then
+        echo "❌  Mission failed: Some lines are still missing [TODO]. Try again."
+      else
+        echo "🎉  Mission accomplished! You passed Level 18!"
+        echo "level18=completed" >> progress.log
+      fi
+      ;;
 
 
 
@@ -295,7 +312,10 @@ elif ! grep -q "level15=completed" progress.log; then
   run_level 15
 elif ! grep -q "level16=completed" progress.log; then
   run_level 16
-
+elif ! grep -q "level17=completed" progress.log; then
+  run_level 17
+elif ! grep -q "level18=completed" progress.log; then
+  run_level 18
 
 
 
