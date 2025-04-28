@@ -387,6 +387,48 @@ fi
         echo "level30=completed" >> progress.log
       fi
       ;;
+    31)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+
+      # 1. No TODO: must remain
+      if echo "$TASK_CONTENT" | grep -q 'TODO:'; then
+        echo "❌  Mission failed: at least one TODO: still present."
+      # 2. All lines must start with "- [ ]"
+      elif ! echo "$TASK_CONTENT" | grep -c '^- \[ \]' | grep -q '^5$'; then
+        echo "❌  Mission failed: not all lines were converted to - [ ]."
+      else
+        echo "🎉  Mission accomplished! You passed Level 31!"
+        echo "level31=completed" >> progress.log
+      fi
+      ;;
+    32)
+      if [[ -f fileA.txt && -f fileB.txt && -f fileC.txt ]]; then
+        if grep -q 'WRONG' fileA.txt || grep -q 'WRONG' fileB.txt || grep -q 'WRONG' fileC.txt
+        then
+          echo "❌  Mission failed: at least one WRONG is still present."
+        else
+          echo "🎉  Mission accomplished! You passed Level 32!"
+          echo "level32=completed" >> progress.log
+          rm fileA.txt fileB.txt fileC.txt         # tidy up
+        fi
+      else
+        echo "❌  Mission failed: one or more files are missing."
+      fi
+      ;;
+    33)
+      if [[ -f alpha.txt && -f beta.txt && -f gamma.txt ]]; then
+        if grep -q 'OLD' alpha.txt || grep -q 'OLD' beta.txt || grep -q 'OLD' gamma.txt
+        then
+          echo "❌  Mission failed: at least one file still contains “OLD”."
+        else
+          echo "🎉  Mission accomplished! You passed Level 33!"
+          echo "level33=completed" >> progress.log
+          rm alpha.txt beta.txt gamma.txt
+        fi
+      else
+        echo "❌  Mission failed: one or more files are missing."
+      fi
+      ;;
 
 
 
@@ -481,9 +523,12 @@ elif ! grep -q "level29=completed" progress.log; then
   run_level 29
 elif ! grep -q "level30=completed" progress.log; then
   run_level 30
-
-
-
+elif ! grep -q "level31=completed" progress.log; then
+  run_level 31
+elif ! grep -q "level32=completed" progress.log; then
+  run_level 32
+elif ! grep -q "level33=completed" progress.log; then
+  run_level 33
 
 
 else
