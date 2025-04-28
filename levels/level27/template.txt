@@ -1,0 +1,24 @@
+WELCOME TO LEVEL 27 — TERMINAL INSIDE VIM
+=========================================
+
+Goal • open a terminal buffer and run the echo command.
+
+────────────────────────────────────────
+1.  Open a terminal:
+        :terminal
+
+2.  In the terminal type exactly:
+        echo LEVEL27_OK
+
+3.  Press <Enter>.  You should see ‘LEVEL27_OK’.
+
+4.  Return to Normal mode:
+        <Ctrl-w> N
+
+5.  Quit Vim:
+        :qa
+────────────────────────────────────────
+
+<<TASK>>
+Watch the terminal output for the magic word.
+<<END>>

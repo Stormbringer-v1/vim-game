@@ -1,0 +1,25 @@
+WELCOME TO LEVEL 25 — WINDOW MANAGEMENT
+=======================================
+
+Goal • open a vertical split, move between windows, resize them.
+
+────────────────────────────────────────
+1.  Split the window vertically:
+        :vsplit
+
+2.  Move to the right window:
+        <Ctrl-w> l
+
+3.  Make the right window wider:
+        <Ctrl-w> >
+
+4.  Make it narrower again:
+        <Ctrl-w> <
+
+5.  Quit all:
+        :qa
+────────────────────────────────────────
+
+<<TASK>>
+No edits needed — just practise splitting and resizing.
+<<END>>

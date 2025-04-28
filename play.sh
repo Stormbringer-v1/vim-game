@@ -309,6 +309,88 @@ fi
         echo "level23=completed" >> progress.log
       fi
       ;;
+    24)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      
+      if echo "$TASK_CONTENT" | grep -q "First important place" && \
+         echo "$TASK_CONTENT" | grep -q "Second important place"; then
+        echo "🎉  Mission accomplished! You passed Level 24!"
+        echo "level24=completed" >> progress.log
+      else
+        echo "❌  Mission failed: Important lines are missing. Try again."
+      fi
+      ;;
+      25) if grep -q '^:vsplit$' "$TMP_FILE"; then :; fi   # no-op, keep shell happy
+      echo "🎉  Mission accomplished! You passed Level 25!"
+      echo "level25=completed" >> progress.log
+      ;;
+      26)
+      if [[ -f file1.txt && -f file2.txt ]] && cmp -s file1.txt file2.txt
+      then
+        echo "🎉  Mission accomplished! You passed Level 26!"
+        echo "level26=completed" >> progress.log
+        rm file1.txt file2.txt
+      else
+        echo "❌  Mission failed: file1.txt and file2.txt are not identical."
+      fi
+      ;;
+    27)
+      if grep -q 'LEVEL27_OK' "$TMP_FILE"; then
+        echo "🎉  Mission accomplished! You passed Level 27!"
+        echo "level27=completed" >> progress.log
+      else
+        echo "❌  Mission failed: echo output not found. Try again."
+      fi
+      ;;
+      28)
+      if grep -q '^set\ number' ~/.vimrc; then
+        echo "🎉  Mission accomplished! You passed Level 28!"
+        echo "level28=completed" >> progress.log
+      else
+        echo "❌  Mission failed: ‘set number’ not found in ~/.vimrc."
+      fi
+      ;;
+    29)
+      # List of words that *must not* be present anywhere in the buffer
+      BADWORDS=(paragraf mispelled wird alsso twoo errorss thiss linee bee afterr themm)
+
+      FAILED=0
+      for w in "${BADWORDS[@]}"; do
+        # \b isn't POSIX for grep; use \< and \> to mark word-boundaries
+        if grep -qi "\<$w\>" "$TMP_FILE"; then
+          FAILED=1
+          break
+        fi
+      done
+
+      if [[ $FAILED -eq 0 ]]; then
+        echo "🎉  Mission accomplished! You passed Level 29!"
+        echo "level29=completed" >> progress.log
+      else
+        echo "❌  Mission failed: at least one misspelling is still present."
+      fi
+      ;;
+
+    30)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+
+      if echo "$TASK_CONTENT" | grep -q 'TODO_DELETE'; then
+        echo "❌  Mission failed: TODO_DELETE lines still present."
+      elif echo "$TASK_CONTENT" | grep -q '\bteh\b'; then
+        echo "❌  Mission failed: the word “teh” is still present."
+      elif echo "$TASK_CONTENT" | grep -q '▶[[:space:]]*$'; then
+        echo "❌  Mission failed: the ▶ column is still there."
+      elif echo "$TASK_CONTENT" | grep -Ei '\b(paragraf|qick|errr|Speling|errorss)\b'; then
+        echo "❌  Mission failed: spelling errors remain."
+      else
+        echo "🎉🎉  Editor’s Trial defeated — Level 30 clear!"
+        echo "level30=completed" >> progress.log
+      fi
+      ;;
+
+
+
+
 
 
 
@@ -385,6 +467,23 @@ elif ! grep -q "level22=completed" progress.log; then
   run_level 22
 elif ! grep -q "level23=completed" progress.log; then
   run_level 23
+elif ! grep -q "level24=completed" progress.log; then
+  run_level 24
+elif ! grep -q "level25=completed" progress.log; then
+  run_level 25
+  elif ! grep -q "level26=completed" progress.log; then
+  run_level 26
+elif ! grep -q "level27=completed" progress.log; then
+  run_level 27
+elif ! grep -q "level28=completed" progress.log; then
+  run_level 28
+elif ! grep -q "level29=completed" progress.log; then
+  run_level 29
+elif ! grep -q "level30=completed" progress.log; then
+  run_level 30
+
+
+
 
 
 else

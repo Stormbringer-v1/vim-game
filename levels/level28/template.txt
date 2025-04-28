@@ -1,0 +1,24 @@
+WELCOME TO LEVEL 28 — EDIT YOUR .vimrc
+======================================
+
+Goal • add ‘set number’ to ~/.vimrc, reload it, see line numbers.
+
+────────────────────────────────────────
+1.  Open your config file:
+        :e ~/.vimrc
+
+2.  Add this line if it’s missing:
+        set number
+
+3.  Save and source:
+        :w | :source %
+
+4.  Confirm you now see line numbers.
+
+5.  Quit:
+        :qa
+────────────────────────────────────────
+
+<<TASK>>
+Nothing to change here — you’ll edit ~/.vimrc instead.
+<<END>>

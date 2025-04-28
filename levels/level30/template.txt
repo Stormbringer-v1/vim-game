@@ -1,0 +1,30 @@
+MINI-BOSS #3 — THE EDITOR’S TRIAL
+=================================
+
+You made it this far; now fix a real article draft using every tool
+you know: macros, global commands, visual-block, registers and folds.
+
+────────────────────────────────────────
+✔  Tasks you MUST complete
+
+1.  Delete every line containing       TODO_DELETE
+2.  Replace every “ teh ” with         the
+3.  Remove the trailing column of      ▶
+4.  Spell-check and fix obvious typos  (errr → err, qick → quick)
+────────────────────────────────────────
+
+<<TASK>>
+## Introduction ▶
+This paragraf has the word teh in it. ▶
+It also contains a qick errr for you to fix. ▶
+TODO_DELETE this note must be deleted ▶
+
+## Body ▶
+Some normal content resides here. ▶
+Another line with teh that needs fixing. ▶
+TODO_DELETE temporary debug line ▶
+End of real content. ▶
+
+## Conclusion ▶
+Speling errorss are gone; everything looks good now. ▶
+<<END>>
