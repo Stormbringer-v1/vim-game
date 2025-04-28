@@ -1,0 +1,27 @@
+WELCOME TO LEVEL 21 — CODE FOLDING
+==================================
+
+Goal • create folds, toggle them, then delete them.
+
+────────────────────────────────────────
+1.  Move to the line that says  BEGIN FUNC .
+2.  Create a fold from there to  END FUNC :
+        Vj j j …   (select lines)
+        zf
+3.  Close the fold            za
+4.  Re-open the fold          za
+5.  Delete the fold           zd
+6.  Save & quit               :wq
+────────────────────────────────────────
+
+<<TASK>>
+BEGIN FUNC
+    echo "line 1"
+    echo "line 2"
+    echo "line 3"
+END FUNC
+BEGIN FUNC
+    echo "line A"
+    echo "line B"
+END FUNC
+<<END>>

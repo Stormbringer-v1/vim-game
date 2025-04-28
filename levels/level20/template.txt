@@ -1,0 +1,22 @@
+THE GRAND CLEAN-UP — MINI-BOSS #2
+=================================
+
+Fix this chaotic file using *any* Vim skills you like.
+
+────────────────────────────────────────────
+Mission checklist
+• Delete every line that contains  NOISE_NOISE_NOISE
+• Replace all mistyped  teh  →  the
+• Remove the vertical column of   X   characters
+• Save and quit.
+────────────────────────────────────────────
+
+<<TASK>>
+Here we go!
+This is teh first good line.   X
+NOISE_NOISE_NOISE  should vanish.
+Second line with teh typo.      X
+Another clean line.             X
+NOISE_NOISE_NOISE again.
+Last line with the word teh.    X
+<<END>>

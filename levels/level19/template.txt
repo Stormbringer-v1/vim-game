@@ -1,0 +1,28 @@
+WELCOME TO LEVEL 19 — SESSIONS
+==============================
+
+Goal • save your current workspace to a session file, reload it inside
+the same Vim, then quit.
+
+────────────────────────────────────────
+1. Open a new tab:               :tabnew
+
+2. In the new tab open a file:   :e workfile.txt
+
+3. Insert the line:              This file is in the session!
+   (type i, the text, then <Esc>, :w to save)
+
+4. Save the entire workspace to a session file:
+      :mksession! mysession.vim
+
+5. **Reload** that session *inside the same Vim*:
+      :source mysession.vim
+
+   You should now see your tab and workfile exactly as they were.
+
+6. Quit Vim:                     :wq
+────────────────────────────────────────
+
+<<TASK>>
+You will create a new tab and a new file inside Vim.
+<<END>>

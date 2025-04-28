@@ -1,0 +1,26 @@
+WELCOME TO LEVEL 22 — THE QUICK-FIX LIST
+========================================
+
+Goal • use external grep, open the quick-fix window, and correct errors.
+
+────────────────────────────────────────
+1.  From NORMAL mode run:
+        :grep -n TODO %
+2.  Open the quick-fix window:
+        :copen
+3.  Jump to each entry:
+        :cnext   (or  :cn  )
+4.  Replace every  TODO  with  DONE .
+5.  Close quick-fix:
+        :cclose
+6.  Save & quit:
+        :wq
+────────────────────────────────────────
+
+<<TASK>>
+First DONE already.
+Second line TODO fix me.
+Another good line.
+Third line TODO also fix.
+Last line with TODO here.
+<<END>>

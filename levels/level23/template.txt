@@ -1,0 +1,23 @@
+WELCOME TO LEVEL 23 — TEXT OBJECT MAGIC
+=======================================
+
+Goal • replace the contents of quoted strings and delete a parenthesised
+phrase using **text-object motions only** (no arrow keys or visual mode).
+
+────────────────────────────────────────────
+1. Move anywhere inside  "OLD"     on line 1.
+2. Change inside the quotes:       ci"NEW
+
+3. Move anywhere inside the text   (remove me)   on line 2.
+4. Delete **around** parentheses:  da(
+
+After step 4 the phrase (remove me) should disappear completely.
+
+5. Save & quit:                    :wq
+────────────────────────────────────────────
+
+<<TASK>>
+She said "OLD" and walked away.
+Please erase this (remove me) but keep the line.
+This line is already fine.
+<<END>>

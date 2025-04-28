@@ -248,8 +248,67 @@ fi
         echo "level18=completed" >> progress.log
       fi
       ;;
+    19)
+      if [[ -f mysession.vim && -f workfile.txt ]]; then
+        if grep -q "This file is in the session!" workfile.txt; then
+          echo "🎉  Mission accomplished!  You passed Level 19!"
+          echo "level19=completed" >> progress.log
+          rm mysession.vim workfile.txt   # clean-up
+        else
+          echo "❌  Mission failed: workfile.txt has wrong content. Try again."
+        fi
+      else
+        echo "❌  Mission failed: session or file missing. Try again."
+      fi
+      ;;
+    20)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
 
+      if echo "$TASK_CONTENT" | grep -q "NOISE_NOISE_NOISE"; then
+        echo "❌  Mission failed: noisy lines still exist. Try again."
+      elif echo "$TASK_CONTENT" | grep -q "\bteh\b"; then
+        echo "❌  Mission failed: the word 'teh' is still present. Try again."
+      elif echo "$TASK_CONTENT" | grep -q "X[[:space:]]*$"; then
+        echo "❌  Mission failed: the X column is still there. Try again."
+      else
+        echo "🎉🎉  Mini-Boss defeated! You passed Level 20!"
+        echo "level20=completed" >> progress.log
+      fi
+      ;;
+    21)
+      # Detect any existing manual folds in file: look for {{{ or fold markers
+      if vim -es -u NONE -c 'set nomore' \
+           -c 'silent! %foldexpr' -c 'set foldmethod=manual' \
+           -c 'echo foldclosed(1)' -c 'qa!' "$TMP_FILE" | grep -q '^[0-9]\+'; then
+        echo "❌  Mission failed: a fold is still present.  Try again."
+      else
+        echo "🎉  Mission accomplished!  You passed Level 21!"
+        echo "level21=completed" >> progress.log
+      fi
+      ;;
+    22)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      if echo "$TASK_CONTENT" | grep -q "TODO"; then
+        echo "❌  Mission failed: at least one TODO is still present.  Try again."
+      else
+        echo "🎉  Mission accomplished!  You passed Level 22!"
+        echo "level22=completed" >> progress.log
+      fi
+      ;;
+    23)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
 
+      if echo "$TASK_CONTENT" | grep -q '"OLD"'; then
+        echo "❌  Mission failed: \"OLD\" is still present. Try again."
+      elif echo "$TASK_CONTENT" | grep -q "(remove me)"; then
+        echo "❌  Mission failed: the parenthesised phrase is still there. Try again."
+      elif ! echo "$TASK_CONTENT" | grep -q '"NEW"'; then
+        echo "❌  Mission failed: \"NEW\" not found. Try again."
+      else
+        echo "🎉  Mission accomplished! You passed Level 23!"
+        echo "level23=completed" >> progress.log
+      fi
+      ;;
 
 
 
@@ -316,7 +375,16 @@ elif ! grep -q "level17=completed" progress.log; then
   run_level 17
 elif ! grep -q "level18=completed" progress.log; then
   run_level 18
-
+elif ! grep -q "level19=completed" progress.log; then
+  run_level 19
+elif ! grep -q "level20=completed" progress.log; then
+  run_level 20
+elif ! grep -q "level21=completed" progress.log; then
+  run_level 21
+elif ! grep -q "level22=completed" progress.log; then
+  run_level 22
+elif ! grep -q "level23=completed" progress.log; then
+  run_level 23
 
 
 else
