@@ -1,0 +1,39 @@
+WELCOME TO LEVEL 41 — NAMED REGISTERS “a
+========================================
+
+🏆  Mission  
+Copy three specific lines from  source.txt  into  dest.txt
+using **register "a"** — no macros, no plugins, pure Vim registers.
+
+────────────────────────────────────────
+📝  Step-by-step
+
+1.  Open (create) the first file and type the block exactly
+        :e source.txt
+        iCOPY_ME one
+        COPY_ME two
+        COPY_ME three<Esc>
+        :w
+
+2.  Yank those three lines into register  "a
+        ggV2j          " select all three lines
+        "ay            " yank into register  a
+
+3.  Open / create the destination file
+        :e dest.txt
+
+4.  Put the yanked text
+        "ap
+
+5.  Save & quit
+        :wq
+────────────────────────────────────────
+✅  Success checklist
+    • dest.txt contains the three COPY_ME lines in order.
+    • source.txt still has them too (we only copied, not moved).
+────────────────────────────────────────
+
+<<TASK>>
+source.txt          →  COPY_ME lines live here first
+dest.txt            →  must receive those lines via register "a"
+<<END>>

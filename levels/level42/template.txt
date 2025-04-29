@@ -1,0 +1,35 @@
+WELCOME TO LEVEL 42 — REGEX CAPTURE GROUPS
+==========================================
+
+🏆  Mission  
+Convert every “FirstName LastName” into “LastName, FirstName”
+using **one single** substitution with capture groups.
+
+────────────────────────────────────────
+📝  Step-by-Step
+
+1.  Make sure you are in Normal mode.
+
+2.  Run one command (all in one line):
+
+        :%s/^\(\w\+\) \(\w\+\)$/\2, \1/
+
+    • `\(` `\)`    capture First & Last names  
+    • `\2, \1`    re-use captures in reversed order
+
+3.  Confirm each line now follows “LastName, FirstName”.
+
+4.  Save & quit  :wq
+────────────────────────────────────────
+✅  Success checklist  
+    • No line still contains a space-separated name  
+    • All lines match `LastName, FirstName`
+────────────────────────────────────────
+
+<<TASK>>
+Grace Hopper
+Alan Turing
+Ada Lovelace
+Linus Torvalds
+Margaret Hamilton
+<<END>>

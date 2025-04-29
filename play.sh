@@ -537,7 +537,78 @@ fi
         echo "⚠️  Fix the issues above and try again."
       fi
       ;;
+    41)
+      if [[ -f source.txt && -f dest.txt ]]; then
+        expected=$(printf "COPY_ME one\nCOPY_ME two\nCOPY_ME three")
+        if diff <(echo "$expected") <(head -n3 dest.txt) >/dev/null; then
+          echo "🎉  Mission accomplished! You passed Level 41!"
+          echo "level41=completed" >> progress.log
+          rm source.txt dest.txt
+        else
+          echo "❌  Mission failed: dest.txt does not contain the required lines."
+        fi
+      else
+        echo "❌  Mission failed: source.txt or dest.txt is missing."
+      fi
+      ;;
+    42)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
 
+      # Must have one comma, one space, and no remaining plain names.
+      if echo "$TASK_CONTENT" | grep -q '^[A-Za-z]\+ [A-Za-z]\+'; then
+        echo "❌  Mission failed: at least one name is still FirstName LastName."
+      elif echo "$TASK_CONTENT" | grep -vq '^[A-Za-z]\+, [A-Za-z]\+$'; then
+        echo "❌  Mission failed: lines are not all in “Last, First” form."
+      else
+        echo "🎉  Mission accomplished! You passed Level 42!"
+        echo "level42=completed" >> progress.log
+      fi
+      ;;
+    43)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      if echo "$TASK_CONTENT" | grep -vq '^- '; then
+        echo "❌  Mission failed: at least one line is missing the bullet “- ”."
+      else
+        echo "🎉  Mission accomplished! You passed Level 43!"
+        echo "level43=completed" >> progress.log
+      fi
+      ;;
+    44)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+
+      # Fail if any TODO: prefix remains
+      if echo "$TASK_CONTENT" | grep -q '^TODO:'; then
+        echo "❌  Mission failed: at least one TODO: line still present."
+      # Fail if any checkbox line is missing
+      elif ! echo "$TASK_CONTENT" | grep -q '^- \[ \] '; then
+        echo "❌  Mission failed: no checkbox lines found."
+      # Success
+      else
+        echo "🎉  Mission accomplished! You passed Level 44!"
+        echo "level44=completed" >> progress.log
+      fi
+      ;;
+    45)
+      # helper: test sorted bullet list
+      bullet_list=$(awk '/^## Tasks/{flag=1;next}/^##/{flag=0}flag' "$TMP_FILE" | sed -n '/^- /p')
+      sorted_list=$(echo "$bullet_list" | sort -f)
+
+      clean() { echo "❌  Mission failed: $1" ; return 1; }
+
+      first_line=$(head -n1 "$TMP_FILE")
+      [[ "$first_line" == "# Final Report" ]] || clean "missing header '# Final Report'." || break
+
+      grep -q 'DEBUG'      "$TMP_FILE" && clean "DEBUG still present."      && break
+      grep -q '\bTODO\b'   "$TMP_FILE" && clean "TODO still present."       && break
+      grep -qi '\bteh\b'   "$TMP_FILE" && clean "typo 'teh' still present." && break
+      grep -q '\t'        "$TMP_FILE" && clean "tab character still present." && break
+      grep -q '[[:space:]]$' "$TMP_FILE" && clean "trailing spaces remain." && break
+      grep -q -E '^[[:space:]]*$\n^[[:space:]]*$' "$TMP_FILE" && clean "multiple blank lines remain." && break
+      diff <(echo "$bullet_list") <(echo "$sorted_list") >/dev/null || { clean "bullet list not alphabetical." ; break; }
+
+      echo "🏆  FINAL BOSS DEFEATED — You are a Vim Grand Master!"
+      echo "level45=completed" >> progress.log
+      ;;
 
 
 
@@ -649,6 +720,16 @@ elif ! grep -q "level39=completed" progress.log; then
   run_level 39
 elif ! grep -q "level40=completed" progress.log; then
   run_level 40
+elif ! grep -q "level41=completed" progress.log; then
+  run_level 41
+elif ! grep -q "level42=completed" progress.log; then
+  run_level 42
+  elif ! grep -q "level43=completed" progress.log; then
+  run_level 43
+elif ! grep -q "level44=completed" progress.log; then
+  run_level 44
+elif ! grep -q "level45=completed" progress.log; then
+  run_level 45
 
 
 else

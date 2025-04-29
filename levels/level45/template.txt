@@ -1,0 +1,79 @@
+FINAL BOSS — THE GRAND EDIT
+===========================
+
+You know the drill: satisfy **all eight objectives** (header, delete DEBUG,
+replace TODO, fix “teh”, untabify, kill trailing spaces, collapse blank lines,
+alphabetise the Tasks list) and quit Vim.
+
+────────────────────────────────────────
+RAW MONSTROSITY STARTS HERE
+(-- everything below <<TASK>> is part of the file Vim opens –-)
+
+<<TASK>>
+DEBUG session begins
+This is teh opening paragraph.	It contains DEBUG noise and a TODO marker.     
+  
+## Background
+teh quick brown fox	      
+DEBUG diagnostic here	   
+Another line with trailing spaces.      
+A tabbed	line with TODO to fix.	 
+  
+## Long Story
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. TODO update wording.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. DEBUG trace.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.	     
+  
+Blank line below (keep only one!)  
+  
+  
+Another paragraph with teh typo multiple times: teh and Teh and tEh.   
+End of long story.      
+  
+## Tasks
+- write code
+- Walk the dog
+- buy groceries
+- Attend meeting
+- file taxes
+- clean desk
+- Review PR
+- Plan vacation
+- Fix bug
+- write documentation
+- DEBUG obsolete task
+- TODO add more tasks
+- Organise desk
+- Pay bills
+- Compile report
+- Backup data
+- Update dependencies
+- refactor code
+- Answer emails
+- update resume
+  
+## Extra Notes
+Line with tab	and trailing spaces	 	 
+Another DEBUG line.	 
+TODO another item to rewrite.      
+  
+## Results
+The experiments show teh system works.  TODO polish phrasing.	 
+DEBUG extra log	 
+Blank lines follow (collapse them)...
+
+
+
+
+## Appendix
+1)	Tab numbered item with trailing spaces 	 
+2)	Second item with TODO	   
+3)	Third item with DEBUG	  
+  
+
+Last line with nothing special.
+<<END>>
