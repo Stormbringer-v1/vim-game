@@ -1,0 +1,46 @@
+WELCOME TO LEVEL 34 — ABBREVIATIONS & MAPPINGS
+==============================================
+
+🏆 Mission  
+Add an abbreviation and a normal-mode mapping to a **scratch vimrc**
+located in this project directory, reload it, and prove they work.
+
+─────────────────────────────────────────────
+📝 Step-by-step
+
+1.  Open (or create) the scratch config file for this game:
+        :e .vimrc_level34
+
+2.  Add these two lines exactly:
+
+        iabbrev btw by the way
+        nnoremap <F5> :echo "LEVEL34_OK"<CR>
+
+3.  Write and source the file:
+        :w | :source %
+
+4.  Test abbreviation  
+    - In **Insert** mode type:         btw<Space>  
+    - It should expand to:             by the way
+
+5.  Test mapping  
+    - Press <F5> in **Normal** mode.  
+    - The message  LEVEL34_OK  must appear at the bottom.
+
+6.  Quit:
+        :qa
+─────────────────────────────────────────────
+✅  Success checklist  
+    • File .vimrc_level34 exists  
+    • Contains the exact abbrev & mapping lines  
+    • Abbrev expands and <F5> prints LEVEL34_OK
+─────────────────────────────────────────────
+
+<<TASK>>
+Create .vimrc_level34 with:
+
+iabbrev btw by the way
+nnoremap <F5> :echo "LEVEL34_OK"<CR>
+
+Then prove they work, save and quit.
+<<END>>

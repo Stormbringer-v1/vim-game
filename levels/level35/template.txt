@@ -1,0 +1,42 @@
+WELCOME TO LEVEL 35 — YOUR FIRST AUTOCOMMAND
+============================================
+
+🏆 Mission  
+Create an autocommand that automatically appends the line
+
+    # SAVED
+
+to **log.txt** every time you save that file.
+
+────────────────────────────────────────
+📝 Step-by-step
+
+1.  Open (or create) a scratch rc just for this level:
+        :e .vimrc_level35
+
+2.  Add these lines exactly:
+
+        augroup L35
+          autocmd!
+          autocmd BufWritePost log.txt call append(line('$'), '# SAVED')
+        augroup END
+
+3.  Write & source:
+        :w | :source %
+
+4.  Open the file you’ll test on:
+        :e log.txt
+        iInitial content<Esc>
+
+5.  Save log.txt:
+        :w
+    → A new line  # SAVED  appears at the bottom.
+
+6.  Quit Vim:
+        :qa
+────────────────────────────────────────
+
+<<TASK>>
+Create .vimrc_level35 with the autocommand above, save log.txt once,
+and quit.  The checker will pass when log.txt ends with  # SAVED.
+<<END>>

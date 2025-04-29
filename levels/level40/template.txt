@@ -1,0 +1,51 @@
+MINI-BOSS #4 — MULTI-FILE CLEAN-UP
+==================================
+
+🏆  Objectives (all must be fulfilled)
+
+1.  Delete every line that contains        DEBUG_PRINT
+2.  Replace every occurrence of            TODO   with   DONE
+3.  Sort each file alphabetically (A → Z)  once cleaning is finished
+
+────────────────────────────────────────
+📂  Files you must create inside Vim
+
+main.py
+--------
+import os
+DEBUG_PRINT Starting app
+def run():
+    print("Hello World")  # TODO
+
+utils.py
+--------
+def helper():
+    DEBUG_PRINT entering helper
+    return 42  # TODO
+
+readme.txt
+--------
+TODO add introduction
+Important section
+DEBUG_PRINT temporary note
+────────────────────────────────────────
+💡  One-liner that can do it (after you :args the three files):
+
+    :argdo g/DEBUG_PRINT/d | %s/TODO/DONE/ge | sort | update
+
+(You are free to solve it any way you like.)
+
+Finally  :qa
+────────────────────────────────────────
+✅  Checker looks for
+
+• All three files exist  
+• ZERO “DEBUG_PRINT” anywhere  
+• ZERO “TODO” anywhere  
+• Each file sorted alphabetically
+────────────────────────────────────────
+
+<<TASK>>
+Create main.py, utils.py, readme.txt exactly as shown above,
+meet the three objectives, then quit Vim.
+<<END>>

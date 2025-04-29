@@ -429,8 +429,114 @@ fi
         echo "❌  Mission failed: one or more files are missing."
       fi
       ;;
+    34)
+      if [[ -f .vimrc_level34 ]]; then
+        if grep -q 'iabbrev[[:space:]]\+btw[[:space:]]\+by the way' .vimrc_level34 &&
+           grep -q 'nnoremap[[:space:]]\+<F5>[[:space:]]\+:echo "LEVEL34_OK"' .vimrc_level34
+        then
+          echo "🎉  Mission accomplished! You passed Level 34!"
+          echo "level34=completed" >> progress.log
+          rm .vimrc_level34                         # ← clean-up
+        else
+          echo "❌  Mission failed: abbrev or mapping line missing / incorrect."
+        fi
+      else
+        echo "❌  Mission failed: .vimrc_level34 not found."
+      fi
+      ;;
+    35)
+      if [[ -f .vimrc_level35 && -f log.txt ]]; then
+        if tail -n1 log.txt | grep -q '^# SAVED$' &&
+           grep -q 'autocmd BufWritePost log.txt' .vimrc_level35
+        then
+          echo "🎉  Mission accomplished! You passed Level 35!"
+          echo "level35=completed" >> progress.log
+          rm .vimrc_level35 log.txt
+        else
+          echo "❌  Mission failed: either autocommand missing or log.txt not updated."
+        fi
+      else
+        echo "❌  Mission failed: .vimrc_level35 or log.txt not found."
+      fi
+      ;;
+    36)
+      if [[ -f win.txt ]]; then
+        first_line=$(head -n1 win.txt)
+        if [[ "$first_line" == "# WINDOW MAGIC" ]]; then
+          echo "🎉  Mission accomplished! You passed Level 36!"
+          echo "level36=completed" >> progress.log
+          rm win.txt
+        else
+          echo "❌  Mission failed: win.txt does not start with '# WINDOW MAGIC'."
+        fi
+      else
+        echo "❌  Mission failed: win.txt not found."
+      fi
+      ;;
+    37)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
+      expected=$(printf "apple\nbanana\nkiwi\norange\npear")
+      if [[ "$TASK_CONTENT" == "$expected" ]]; then
+        echo "🎉  Mission accomplished! You passed Level 37!"
+        echo "level37=completed" >> progress.log
+      else
+        echo "❌  Mission failed: the lines are not sorted alphabetically."
+      fi
+      ;;
+    38)
+      if [[ -f .vimrc_level38 && -f header.txt ]]; then
+        first_line=$(head -n1 header.txt)
+        if [[ "$first_line" == "# HEADER" ]] && \
+           grep -q 'command! InsertHeader' .vimrc_level38
+        then
+          echo "🎉  Mission accomplished! You passed Level 38!"
+          echo "level38=completed" >> progress.log
+          rm .vimrc_level38 header.txt
+        else
+          echo "❌  Mission failed: either command missing or header.txt not updated."
+        fi
+      else
+        echo "❌  Mission failed: .vimrc_level38 or header.txt not found."
+      fi
+      ;;
+    39)
+      TASK_CONTENT=$(awk '/<<TASK>>/{flag=1;next}/<<END>>/{flag=0}flag' "$TMP_FILE")
 
+      if echo "$TASK_CONTENT" | grep -q '^>>>'; then
+        echo "❌  Mission failed: at least one “>>>” prefix remains."
+      else
+        echo "🎉  Mission accomplished! You passed Level 39!"
+        echo "level39=completed" >> progress.log
+      fi
+      ;;
+    40)
+      files=(main.py utils.py readme.txt)
+      OK=1
 
+      is_sorted() { sort -c "$1" 2>/dev/null; }
+
+      for f in "${files[@]}"; do
+        [[ -f $f ]] || { echo "❌  $f missing."; OK=0; break; }
+
+        if grep -q 'DEBUG_PRINT' "$f"; then
+          echo "❌  DEBUG_PRINT still present in $f."; OK=0; break;
+        fi
+        if grep -q '\bTODO\b' "$f"; then
+          echo "❌  TODO still present in $f."; OK=0; break;
+        fi
+        if ! is_sorted "$f"; then
+          echo "❌  $f is not sorted alphabetically."; OK=0; break;
+        fi
+      done
+
+      if [[ $OK -eq 1 ]]; then
+        echo "🎉🎉  Mini-Boss #4 defeated — Level 40 clear!"
+        echo "level40=completed" >> progress.log
+        rm -f "${files[@]}"
+      else
+        echo "⚠️  Fix the issues above and try again."
+      fi
+      ;;
 
 
 
@@ -529,6 +635,20 @@ elif ! grep -q "level32=completed" progress.log; then
   run_level 32
 elif ! grep -q "level33=completed" progress.log; then
   run_level 33
+elif ! grep -q "level34=completed" progress.log; then
+  run_level 34
+elif ! grep -q "level35=completed" progress.log; then
+  run_level 35
+elif ! grep -q "level36=completed" progress.log; then
+  run_level 36
+elif ! grep -q "level37=completed" progress.log; then
+  run_level 37
+elif ! grep -q "level38=completed" progress.log; then
+  run_level 38
+elif ! grep -q "level39=completed" progress.log; then
+  run_level 39
+elif ! grep -q "level40=completed" progress.log; then
+  run_level 40
 
 
 else

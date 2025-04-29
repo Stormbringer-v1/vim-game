@@ -1,0 +1,38 @@
+WELCOME TO LEVEL 36 — WINDOW AUTOMATION WITH :WINDO
+===================================================
+
+🏆  Mission  
+Open a vertical split of the same buffer, then use **one single
+:windo** command to add the line
+
+    # WINDOW MAGIC
+
+to the top of *every* window.
+
+────────────────────────────────────────
+📝  Step-by-step
+
+1.  Save this buffer as win.txt
+        :saveas win.txt
+
+2.  Create a vertical split
+        :vsplit
+
+3.  Confirm you now have two windows that show win.txt.
+
+4.  Insert the magic line in **both windows at once**
+        :windo call append(0, '# WINDOW MAGIC')
+
+    (append 0 adds a line *above* line 1 in each window.)
+
+5.  Quit
+        :wq
+────────────────────────────────────────
+✅  Success checklist  
+    • File  win.txt  exists  
+    • The first line of  win.txt  is exactly  # WINDOW MAGIC
+────────────────────────────────────────
+
+<<TASK>>
+Split this file, run the :windo command, then quit.
+<<END>>

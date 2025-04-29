@@ -1,0 +1,36 @@
+vWELCOME TO LEVEL 39 — :GLOBAL + :NORMAL
+=======================================
+
+🏆  Mission  
+Use ONE `:g` command that executes a *normal-mode* keystroke
+on every line that starts with “>>>”, deleting the arrows.
+
+────────────────────────────────────────
+📝  Step-by-step
+
+1.  Make sure you are in Normal mode.
+
+2.  Run exactly this command (all one line):
+
+        :g/^>>>/normal! ^3x
+
+    • `g/^>>>/`      → target each line that begins with >>>  
+    • `normal!`      → followed by a literal Normal keystroke sequence  
+    • `^3x`          → jump to first non-blank char (`^`) then delete 3 chars (`3x`)
+
+3.  Verify that no line starts with “>>>”.
+
+4.  Save & quit:     :wq
+────────────────────────────────────────
+✅  Success checklist  
+    • No line begins with “>>>”  
+    • The words after the arrows remain intact
+────────────────────────────────────────
+
+<<TASK>>
+>>>Finish report
+>>>Review pull request
+>>>Book plane tickets
+>>>Write blog post
+Done line (should stay unchanged)
+<<END>>

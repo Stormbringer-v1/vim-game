@@ -1,0 +1,37 @@
+WELCOME TO LEVEL 37 — SORT WITH “!sort”
+=======================================
+
+🏆  Mission  
+Alphabetise the list below **from inside Vim** by sending the block
+through the external command `sort`.
+
+────────────────────────────────────────
+📝  Step-by-step
+
+1.  Visually select the five fruit lines
+        V  ↓ ↓ ↓ ↓        (or use `vip` if cursor already on the block)
+
+2.  Pipe the selection through `sort`
+        !sort<Enter>
+
+3.  The lines reappear, sorted A→Z.
+
+4.  Save & quit
+        :wq
+────────────────────────────────────────
+✅  Success checklist  
+    • The block is in strict alphabetical order:
+        apple
+        banana
+        kiwi
+        orange
+        pear
+────────────────────────────────────────
+
+<<TASK>>
+banana
+orange
+pear
+apple
+kiwi
+<<END>>
