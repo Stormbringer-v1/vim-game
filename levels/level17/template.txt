@@ -1,38 +1,23 @@
 WELCOME TO LEVEL 17 — ADVANCED MACROS
-======================================
+=====================================
 
-Goal: Record a macro and apply it over multiple lines!
+🏆  Mission  
+Complete the following objective to pass this level.
 
-────────────────────────────────────────────
-1. Move to the first line that says: "bad line".
+────────────────────────────────────────
+📝  Step-by-step
 
-2. Start recording a macro into register **a**:
-      qa
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-3. Inside the recording:
-    - Delete the bad line:
-         dd
-    - Move to the next line:
-         j
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
-4. Stop recording:
-      q
-
-5. Replay the macro:
-      @a
-
-6. Replay again and again:
-      @@
-      @@
-      @@
-
-(Or just spam @@ until all "bad line" entries are gone.)
-
-7. Save and quit:
-      :wq
-
-────────────────────────────────────────────
-
+────────────────────────────────────────
 <<TASK>>
 Good line.
 bad line

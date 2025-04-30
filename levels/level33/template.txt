@@ -1,46 +1,23 @@
-WELCOME TO LEVEL 33 — CDO & QUICK-FIX MAGIC
-===========================================
+WELCOME TO LEVEL 33 — FIX ME
+============================
 
-  Mission
-    Grep every file for “OLD” → open the quick-fix list →
-    replace “OLD” with “NEW” in every match using **:cdo** →
-    verify that no “OLD” remains anywhere.
+🏆  Mission  
+Complete the following objective to pass this level.
 
-─────────────────────────────────────────────
-  Step-by-Step
+────────────────────────────────────────
+📝  Step-by-step
 
-1.  Create the three sample files inside Vim
-        :e alpha.txt
-        iThis is the OLD line in alpha.<Esc>
-        :w
-        :e beta.txt
-        iAnother OLD example lives here.<Esc>
-        :w
-        :e gamma.txt
-        iGamma also holds an OLD token.<Esc>
-        :w
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-2.  Build a grep-based quick-fix list for the word OLD
-        :grep -R OLD *.txt
-    (You should see “3 matches” reported.)
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
-3.  Open the quick-fix window
-        :copen
-
-4.  Run a substitution on **every** quick-fix entry
-        :cdo %s/OLD/NEW/ge | update
-
-5.  Close quick-fix
-        :cclose
-
-6.  Quit all
-        :qa
-─────────────────────────────────────────────
-  Success Checklist
-    • Files  alpha.txt, beta.txt, gamma.txt exist
-    • None of them contains the word “OLD”
-─────────────────────────────────────────────
-
+────────────────────────────────────────
 <<TASK>>
 Create three files:
   alpha.txt → This is the OLD line in alpha.

@@ -1,16 +1,23 @@
-THE GRAND CLEAN-UP — MINI-BOSS #2
-=================================
+WELCOME TO LEVEL 20 — FIX ME
+============================
 
-Fix this chaotic file using *any* Vim skills you like.
+🏆  Mission  
+Complete the following objective to pass this level.
 
-────────────────────────────────────────────
-Mission checklist
-• Delete every line that contains  NOISE_NOISE_NOISE
-• Replace all mistyped  teh  →  the
-• Remove the vertical column of   X   characters
-• Save and quit.
-────────────────────────────────────────────
+────────────────────────────────────────
+📝  Step-by-step
 
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
+
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
+
+────────────────────────────────────────
 <<TASK>>
 Here we go!
 This is teh first good line.   X

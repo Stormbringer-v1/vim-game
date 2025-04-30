@@ -1,14 +1,23 @@
-FINAL BOSS — THE GRAND EDIT
-===========================
+WELCOME TO LEVEL 45 — FIX ME
+============================
 
-You know the drill: satisfy **all eight objectives** (header, delete DEBUG,
-replace TODO, fix “teh”, untabify, kill trailing spaces, collapse blank lines,
-alphabetise the Tasks list) and quit Vim.
+🏆  Mission  
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
-RAW MONSTROSITY STARTS HERE
-(-- everything below <<TASK>> is part of the file Vim opens –-)
+📝  Step-by-step
 
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
+
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
+
+────────────────────────────────────────
 <<TASK>>
 DEBUG session begins
 This is teh opening paragraph.	It contains DEBUG noise and a TODO marker.     

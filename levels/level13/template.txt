@@ -1,25 +1,23 @@
-CURSED LEVEL — NO ARROWS, NO BACKSPACE
-======================================
+WELCOME TO LEVEL 13 — FIX ME
+============================
 
-This is Level 13 — known as the unlucky number in many cultures. 💀
+🏆  Mission  
+Complete the following objective to pass this level.
 
-Your challenge: fix mistakes without using arrow keys or backspace!
+────────────────────────────────────────
+📝  Step-by-step
 
-────────────────────────────────────────────
-1. You MUST move using:
-      h (left), j (down), k (up), l (right)
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-2. To fix mistakes:
-      - Use 'x' to delete a character
-      - Use 'r<char>' to replace a character
-      - Use 'i' to insert
-      - Use 'cw' to change a word
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
-3. Save and quit:
-      :wq
-
-────────────────────────────────────────────
-
+────────────────────────────────────────
 <<TASK>>
 Thes is a smaple txt.
 You have to fix it without arrow keys!

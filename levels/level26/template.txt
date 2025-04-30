@@ -1,26 +1,23 @@
 WELCOME TO LEVEL 26 — DIFF TWO FILES INSIDE VIM
 ===============================================
 
-Goal • create file1.txt and file2.txt, enable diff, synchronise, quit.
+🏆  Mission  
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
-1.  Save this buffer as file1.txt
-        :saveas file1.txt
+📝  Step-by-step
 
-2.  Split window                  :vsplit
-3.  Move right                    <Ctrl-w> l
-4.  New empty buffer              :enew
-5.  Save as file2.txt             :saveas file2.txt
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-6.  Move left (<Ctrl-w> h), Visually select lines (V), yank (y)
-7.  Move right (<Ctrl-w> l), paste (p)
-8.  Edit one line in file2.txt (i … <Esc>)
-
-9.  Enable diff (both splits)     :windo diffthis
-10. Use :diffget / :diffput until no highlights remain
-11. Save all and quit             :wa | :qa
 ────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
+────────────────────────────────────────
 <<TASK>>
 Hello World
 This is the second line.

@@ -1,24 +1,23 @@
 WELCOME TO LEVEL 27 — TERMINAL INSIDE VIM
 =========================================
 
-Goal • open a terminal buffer and run the echo command.
+🏆  Mission  
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
-1.  Open a terminal:
-        :terminal
+📝  Step-by-step
 
-2.  In the terminal type exactly:
-        echo LEVEL27_OK
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-3.  Press <Enter>.  You should see ‘LEVEL27_OK’.
-
-4.  Return to Normal mode:
-        <Ctrl-w> N
-
-5.  Quit Vim:
-        :qa
 ────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
+────────────────────────────────────────
 <<TASK>>
 Watch the terminal output for the magic word.
 <<END>>

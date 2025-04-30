@@ -1,29 +1,23 @@
 WELCOME TO LEVEL 24 — USING MARKS
 =================================
 
-Goal • place marks and jump instantly between them.
+🏆  Mission  
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
-1. Move to the line with:
-        First important place
-   Set a mark:
-        ma
+📝  Step-by-step
 
-2. Move to the line with:
-        Second important place
-   Set a different mark:
-        mb
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-3. Jump back to the first mark:
-        'a
-
-4. Jump again to the second mark:
-        'b
-
-5. Save and quit:
-        :wq
 ────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
+────────────────────────────────────────
 <<TASK>>
 First important place.
 Some random filler text.

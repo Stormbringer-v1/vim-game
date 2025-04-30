@@ -1,21 +1,23 @@
 WELCOME TO LEVEL 23 — TEXT OBJECT MAGIC
 =======================================
 
-Goal • replace the contents of quoted strings and delete a parenthesised
-phrase using **text-object motions only** (no arrow keys or visual mode).
+🏆  Mission  
+Complete the following objective to pass this level.
 
-────────────────────────────────────────────
-1. Move anywhere inside  "OLD"     on line 1.
-2. Change inside the quotes:       ci"NEW
+────────────────────────────────────────
+📝  Step-by-step
 
-3. Move anywhere inside the text   (remove me)   on line 2.
-4. Delete **around** parentheses:  da(
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-After step 4 the phrase (remove me) should disappear completely.
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
-5. Save & quit:                    :wq
-────────────────────────────────────────────
-
+────────────────────────────────────────
 <<TASK>>
 She said "OLD" and walked away.
 Please erase this (remove me) but keep the line.

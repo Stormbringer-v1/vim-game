@@ -1,32 +1,23 @@
 WELCOME TO LEVEL 14 — WORKING WITH TABS
-========================================
+=======================================
 
-Goal: Open multiple tabs, switch between them, and close them!
+🏆  Mission  
+Complete the following objective to pass this level.
 
-────────────────────────────────────────────
-1. Open a new tab:
-      :tabnew
+────────────────────────────────────────
+📝  Step-by-step
 
-2. Enter INSERT mode (`i`) and write:
-      This is a new tab!
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-3. Save the new tab file (you can save to any file, e.g., tabfile.txt):
-      :w tabfile.txt
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
-4. Switch back to the previous tab:
-      :tabprev
-
-5. Enter INSERT mode (`i`) in the original tab and write:
-      Back to the first tab!
-
-6. Save the original file:
-      :w
-
-7. Quit all tabs:
-      :qa
-
-────────────────────────────────────────────
-
+────────────────────────────────────────
 <<TASK>>
 You are in the first tab. 
 Open a new tab, write something, then return!

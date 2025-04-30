@@ -1,22 +1,23 @@
-WELCOME TO LEVEL 22 — THE QUICK-FIX LIST
-========================================
+WELCOME TO LEVEL 22 — FIX ME
+============================
 
-Goal • use external grep, open the quick-fix window, and correct errors.
+🏆  Mission  
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
-1.  From NORMAL mode run:
-        :grep -n TODO %
-2.  Open the quick-fix window:
-        :copen
-3.  Jump to each entry:
-        :cnext   (or  :cn  )
-4.  Replace every  TODO  with  DONE .
-5.  Close quick-fix:
-        :cclose
-6.  Save & quit:
-        :wq
-────────────────────────────────────────
+📝  Step-by-step
 
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
+
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
+
+────────────────────────────────────────
 <<TASK>>
 First DONE already.
 Second line TODO fix me.

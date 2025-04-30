@@ -1,17 +1,23 @@
 WELCOME TO LEVEL 1 — VIM BASICS
 ===============================
 
-Goal: fix the spelling mistake below, then save & quit.
+🏆  Mission  
+Complete the following objective to pass this level.
 
-────────────────────────────────────────────
-1. Move with ← ↑ → ↓  (or h j k l).
-2. Place the cursor on **DELEETE**.
-3. Press **i** to enter INSERT mode, use **Backspace** to
-   correct the word to **DELETE**, press <Esc>.
-4. Save & quit with  :wq  <Enter>.
-────────────────────────────────────────────
+────────────────────────────────────────
+📝  Step-by-step
 
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
+
+────────────────────────────────────────
 <<TASK>>
 DELEETE
 <<END>>

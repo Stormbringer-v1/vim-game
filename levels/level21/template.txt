@@ -1,19 +1,23 @@
 WELCOME TO LEVEL 21 — CODE FOLDING
 ==================================
 
-Goal • create folds, toggle them, then delete them.
+🏆  Mission  
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
-1.  Move to the line that says  BEGIN FUNC .
-2.  Create a fold from there to  END FUNC :
-        Vj j j …   (select lines)
-        zf
-3.  Close the fold            za
-4.  Re-open the fold          za
-5.  Delete the fold           zd
-6.  Save & quit               :wq
-────────────────────────────────────────
+📝  Step-by-step
 
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
+
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
+
+────────────────────────────────────────
 <<TASK>>
 BEGIN FUNC
     echo "line 1"

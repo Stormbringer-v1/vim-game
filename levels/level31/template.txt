@@ -1,29 +1,23 @@
 WELCOME TO LEVEL 31 — ADVANCED MACROS
 =====================================
 
-Goal • record ONE macro that converts every  TODO:  line
-into an unchecked markdown task  - [ ] …  and then replay it
-to process the whole list.
+🏆  Mission  
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
-1.  Place the cursor on the **first** TODO line.
-2.  Start recording into register  a
-        qa
-3.  Inside the recording:
-        dw             " delete the word  TODO:
-        i- [ ] <Space> " insert markdown checkbox
-        <Esc>
-        j              " move down to next line
-4.  Stop recording
-        q
-5.  Replay the macro once
-        @a
-6.  Replay repeatedly on the remaining lines
-        @@  @@  @@     (or   3@@  for three lines)
-7.  Save & quit
-        :wq
-────────────────────────────────────────
+📝  Step-by-step
 
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
+
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
+
+────────────────────────────────────────
 <<TASK>>
 TODO: buy groceries
 TODO: finish report

@@ -1,25 +1,23 @@
 WELCOME TO LEVEL 25 — WINDOW MANAGEMENT
 =======================================
 
-Goal • open a vertical split, move between windows, resize them.
+🏆  Mission  
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
-1.  Split the window vertically:
-        :vsplit
+📝  Step-by-step
 
-2.  Move to the right window:
-        <Ctrl-w> l
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-3.  Make the right window wider:
-        <Ctrl-w> >
-
-4.  Make it narrower again:
-        <Ctrl-w> <
-
-5.  Quit all:
-        :qa
 ────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
+────────────────────────────────────────
 <<TASK>>
 No edits needed — just practise splitting and resizing.
 <<END>>

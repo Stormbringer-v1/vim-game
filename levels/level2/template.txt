@@ -1,21 +1,23 @@
 WELCOME TO LEVEL 2 — DELETING LINES
 ===================================
 
-Goal: Delete the noisy line inside the task area, then save and quit.
+🏆  Mission  
+Complete the following objective to pass this level.
 
-────────────────────────────────────────────
-1. Move with arrow keys ← ↑ → ↓ (or h j k l).
-2. Move the cursor onto the line that says:  NOISE_NOISE_NOISE
-3. Press:
-      dd
-   to delete the **entire line**.
+────────────────────────────────────────
+📝  Step-by-step
 
-4. Save and quit:
-      :wq <Enter>
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-────────────────────────────────────────────
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
-
+────────────────────────────────────────
 <<TASK>>
 This is a good line.
 NOISE_NOISE_NOISE

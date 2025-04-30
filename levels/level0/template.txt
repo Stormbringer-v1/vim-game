@@ -1,30 +1,23 @@
 WELCOME TO LEVEL 0 — HOW TO QUIT VIM
 ====================================
 
-Goal: Learn how to quit Vim safely!
+🏆  Mission  
+Complete the following objective to pass this level.
 
-────────────────────────────────────────────
-1. You're inside Vim right now.
+────────────────────────────────────────
+📝  Step-by-step
 
-2. Press:
-      <ESC>
-   to make sure you're in NORMAL mode.
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-3. Type a colon:
-      :
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
-4. Then type:
-      q
-   (for quit)
-
-5. Press <Enter>.
-
-If you see any warning like "No write since last change",
-use:
-      :q!
-
-────────────────────────────────────────────
-
+────────────────────────────────────────
 <<TASK>>
 You don't need to edit anything here.
 Just practice quitting Vim safely!

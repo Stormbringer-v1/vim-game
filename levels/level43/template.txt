@@ -1,34 +1,23 @@
-WELCOME TO LEVEL 43 — VISUAL-BLOCK BULLETING
-============================================
+WELCOME TO LEVEL 43 — FIX ME
+============================
 
 🏆  Mission  
-Add the bullet “- ” in front of **every** line below using **one** Visual-Block
-operation (no macros, no repeats).
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
-📝  Step-by-Step
+📝  Step-by-step
 
-1.  Go to the first character of the block (top line).
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-2.  Enter Visual-Block mode:
-        <Ctrl-v>
-
-3.  Move down to the last line (inclusive).
-
-4.  Insert the bullet in front of the block:
-        I- <Esc>
-
-    (That’s capital **I**, hyphen, space, then `<Esc>`.)
-
-    Vim prepends “- ” to every selected line.
-
-5.  Save & quit:
-        :wq
 ────────────────────────────────────────
 ✅  Success checklist  
-    • Every line **begins** with “- ” (hyphen, single space).  
-────────────────────────────────────────
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
+────────────────────────────────────────
 <<TASK>>
 Buy milk
 Arrange meeting

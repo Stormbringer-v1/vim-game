@@ -1,45 +1,23 @@
-WELCOME TO LEVEL 32 — WORKING WITH the ARGLIST and :ARGDO
-=========================================================
+WELCOME TO LEVEL 32 — FIX ME
+============================
 
-  Your mission
-    Create three small files ➜ load them into Vim’s *argument list* ➜
-    fix the same typo in every file with ONE command ➜ quit.
+🏆  Mission  
+Complete the following objective to pass this level.
 
-─────────────────────────────────────────────
-  Step-by-step
+────────────────────────────────────────
+📝  Step-by-step
 
-1.  Edit (create) the first file and write its line
-        :e fileA.txt
-        iThis is WRONG one.<Esc>
-        :w
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-2.  Edit the second file
-        :e fileB.txt
-        iAnother WRONG appears here.<Esc>
-        :w
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
-3.  Edit the third file
-        :e fileC.txt
-        iLast WRONG to correct.<Esc>
-        :w
-
-4.  Load all three files into the *arglist*
-        :args fileA.txt fileB.txt fileC.txt
-        " status line should now show three [arg] files
-
-5.  Run one command over every file in the arglist
-        :argdo %s/WRONG/right/ge | update
-        " (% = whole file, g = all matches, e = silence errors)
-        " update writes each buffer only if it changed
-
-6.  Quit everything
-        :qa
-─────────────────────────────────────────────
-  When you do :argdo…
-    • Vim reports  “fileA.txt: 1 substitution…”, etc.
-    • All three files on disk no longer contain the word  WRONG.
-─────────────────────────────────────────────
-
+────────────────────────────────────────
 <<TASK>>
 Create and fix these three files exactly:
 

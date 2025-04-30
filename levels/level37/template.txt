@@ -1,33 +1,23 @@
-WELCOME TO LEVEL 37 — SORT WITH “!sort”
-=======================================
+WELCOME TO LEVEL 37 — FIX ME
+============================
 
 🏆  Mission  
-Alphabetise the list below **from inside Vim** by sending the block
-through the external command `sort`.
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1.  Visually select the five fruit lines
-        V  ↓ ↓ ↓ ↓        (or use `vip` if cursor already on the block)
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-2.  Pipe the selection through `sort`
-        !sort<Enter>
-
-3.  The lines reappear, sorted A→Z.
-
-4.  Save & quit
-        :wq
 ────────────────────────────────────────
 ✅  Success checklist  
-    • The block is in strict alphabetical order:
-        apple
-        banana
-        kiwi
-        orange
-        pear
-────────────────────────────────────────
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
+────────────────────────────────────────
 <<TASK>>
 banana
 orange

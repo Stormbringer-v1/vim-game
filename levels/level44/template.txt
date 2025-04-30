@@ -1,30 +1,23 @@
 WELCOME TO LEVEL 44 — TURN TODOs INTO CHECKBOXES
 ================================================
 
-🏆 Mission  
-Convert every line that starts with  `TODO:`  into a markdown checkbox  
-`- [ ] …`  using **one** substitute command.
+🏆  Mission  
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
-📝 Step-by-step
+📝  Step-by-step
 
-1. Make sure you’re in Normal mode.
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-2. Run this single command (one line):
-
-        :%s/^TODO: /- [ ] /g
-
-    • `^TODO: `   matches only lines that begin with “TODO: ”  
-    • `- [ ] `    is the replacement checkbox prefix  
-    • `g`         applies it to every match in the buffer.
-
-3. Save and quit:   `:wq`
 ────────────────────────────────────────
-✅ Success checklist  
-    • No line starts with `TODO:`  
-    • Every former TODO line now starts with `- [ ] `
-────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
+────────────────────────────────────────
 <<TASK>>
 TODO: Buy milk
 TODO: Write report

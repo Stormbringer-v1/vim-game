@@ -1,32 +1,23 @@
-WELCOME TO LEVEL 18 — VISUAL BLOCK + INSERT MODE
-=================================================
+WELCOME TO LEVEL 18 — FIX ME
+============================
 
-Goal: Edit multiple lines at once using Visual Block Mode + Insert!
+🏆  Mission  
+Complete the following objective to pass this level.
 
-────────────────────────────────────────────
-1. Move your cursor to the first empty line.
+────────────────────────────────────────
+📝  Step-by-step
 
-2. Press:
-      <Ctrl> + v
-   to enter Visual Block Mode.
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-3. Move down to select multiple empty lines.
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
-4. Press:
-      I
-
-5. Type:
-      [TODO] 
-
-6. Press <ESC>.
-
-All selected lines will now have "[TODO]" inserted at the beginning!
-
-7. Save and quit:
-      :wq
-
-────────────────────────────────────────────
-
+────────────────────────────────────────
 <<TASK>>
 
 Line to fix 1

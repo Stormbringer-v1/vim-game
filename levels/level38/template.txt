@@ -2,45 +2,22 @@ WELCOME TO LEVEL 38 — MAKE YOUR OWN COMMAND
 ===========================================
 
 🏆  Mission  
-Add a *custom ex-command* called  :InsertHeader  that inserts
-
-    # HEADER
-
-as the very first line of whatever buffer you are editing.  
-Use it once on **header.txt**, save, quit, pass the level.
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1.  Open (or create) a scratch rc for this level
-        :e .vimrc_level38
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-2.  Add these three lines exactly:
-
-        augroup L38
-          command! InsertHeader call append(0, '# HEADER')
-        augroup END
-
-3.  Save & source the rc
-        :w | :source %
-
-4.  Create the target file and give it some content
-        :e header.txt
-        iSome body text<Esc>
-
-5.  Run your new command
-        :InsertHeader
-
-    →  `# HEADER` appears on line 1.
-
-6.  Save & quit
-        :wq
 ────────────────────────────────────────
 ✅  Success checklist  
-    • .vimrc_level38 exists and contains the `command!` line  
-    • header.txt exists AND **starts** with `# HEADER`
-────────────────────────────────────────
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
+────────────────────────────────────────
 <<TASK>>
 Create .vimrc_level38, define :InsertHeader, use it once on header.txt,
 then quit.

@@ -1,32 +1,23 @@
 WELCOME TO LEVEL 16 — NAMED REGISTERS
 =====================================
 
-Goal: Learn to copy/yank and paste using Vim's named registers!
+🏆  Mission  
+Complete the following objective to pass this level.
 
-────────────────────────────────────────────
-1. Move to the line containing:
-      First important line
+────────────────────────────────────────
+📝  Step-by-step
 
-2. Yank it into register a:
-      "ayy
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-3. Move to the line containing:
-      Second important line
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
-4. Yank it into register b:
-      "byy
-
-5. Move to the bottom of the file.
-
-6. Paste the two lines back:
-      "ap
-      "bp
-
-7. Save and quit:
-      :wq
-
-────────────────────────────────────────────
-
+────────────────────────────────────────
 <<TASK>>
 First important line
 Some random text

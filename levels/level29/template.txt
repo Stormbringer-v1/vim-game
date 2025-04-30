@@ -1,21 +1,23 @@
 WELCOME TO LEVEL 29 — SPELL CHECK
 =================================
 
-Goal • correct all spelled mistakes using Vim’s spell checker.
+🏆  Mission  
+Complete the following objective to pass this level.
 
 ────────────────────────────────────────
-1.  Enable spell checking:
-        :set spell
+📝  Step-by-step
 
-2.  Jump to next error            ]s
-3.  Suggested fixes list          z=
-4.  Choose the correct word (type its number + <Enter>).
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-5.  Repeat until no red words remain.
-
-6.  Save & quit                   :wq
 ────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
+────────────────────────────────────────
 <<TASK>>
 This paragraf has a mispelled wird.
 It alsso contains twoo errorss on thiss linee.

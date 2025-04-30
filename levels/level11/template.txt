@@ -1,26 +1,23 @@
 WELCOME TO LEVEL 11 — VISUAL BLOCK MODE
-========================================
+=======================================
 
-Goal: Use Visual Block Mode (Ctrl-v) to edit a vertical column of text!
+🏆  Mission  
+Complete the following objective to pass this level.
 
-────────────────────────────────────────────
-1. Move the cursor to the start of the column of X's.
+────────────────────────────────────────
+📝  Step-by-step
 
-2. Press:
-      <Ctrl> + v
-   to enter Visual Block Mode.
+1. Review the task block below
+2. Make the necessary edits
+3. Save and quit Vim with :wq
 
-3. Move the cursor down to select the entire vertical column of X's.
+────────────────────────────────────────
+✅  Success checklist  
+- [ ] Objective completed
+- [ ] File saved correctly
+- [ ] Level passes checker
 
-4. Press:
-      d
-   to delete the entire column at once!
-
-5. Save and quit:
-      :wq
-
-────────────────────────────────────────────
-
+────────────────────────────────────────
 <<TASK>>
 Name: John   X
 Name: Alice  X
