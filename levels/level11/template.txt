@@ -2,20 +2,24 @@ WELCOME TO LEVEL 11 — VISUAL BLOCK MODE
 =======================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use Visual Block mode to remove all the `X`s at the end of the lines — in one move.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Move your cursor to the first `X`.
+2. Press `Ctrl-v` to enter Visual Block mode.
+3. Use `j` to move down and select all `X`s.
+4. Press `x` or `d` to delete the selected column.
+5. Save and quit with `:wq`.
+
+Tip: Visual Block mode lets you edit columns of text — it’s incredibly powerful!
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All `X`s are gone (cleanly!)
+- [ ] You used Visual Block mode with `Ctrl-v`
+- [ ] You saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

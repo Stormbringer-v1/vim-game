@@ -1,21 +1,31 @@
-WELCOME TO LEVEL 36 — FIX ME
-============================
+WELCOME TO LEVEL 36 — :WINDO COMMAND
+====================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use the `:windo` command to apply a setting across all split windows.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Split the current file horizontally using:
+
+   :split
+
+2. Run the following command to enable line numbers in both:
+
+   :windo set number
+
+3. Confirm that line numbers appear in both windows
+4. Save and quit with:
+
+   :wq
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] File was split successfully  
+- [ ] `:windo` command was used correctly  
+- [ ] Line numbers are visible in both windows  
+- [ ] File was saved and exited cleanly
 
 ────────────────────────────────────────
 <<TASK>>

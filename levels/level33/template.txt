@@ -1,21 +1,29 @@
-WELCOME TO LEVEL 33 — FIX ME
-============================
+WELCOME TO LEVEL 33 — GLOBAL SEARCH & FIX
+=========================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Fix all "OLD" tokens across multiple files using a single command.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Open the quickfix window with three files:
+   - `:args alpha.txt beta.txt gamma.txt`
+
+2. Use this command to fix all instances:
+   - `:argdo %s/OLD/NEW/g | update`
+
+3. Or use the quickfix-based command:
+   - `:cdo %s/OLD/NEW/g | update`
+
+4. Save all and quit: `:wqa`
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All three files were created and opened
+- [ ] Every `OLD` replaced with `NEW`
+- [ ] You used a batch command (`cdo` or `argdo`)
+- [ ] Everything saved and closed properly
 
 ────────────────────────────────────────
 <<TASK>>

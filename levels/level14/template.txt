@@ -2,20 +2,25 @@ WELCOME TO LEVEL 14 — WORKING WITH TABS
 =======================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Open a new tab, create a file, write into it, and return here.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Type `:tabnew tabfile.txt` to open a new tab with a new file.
+2. Write `This is a new tab!` and save it with `:w`.
+3. Press `gt` to switch between tabs, or use `:tabprev` to come back here.
+4. Once you're back in this tab, write `Back to the first tab!` anywhere below.
+5. Press `:wq` to save and quit.
+
+Tip: Tabs are like browser tabs — each one holds a full editing session.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] `tabfile.txt` was created and contains the message
+- [ ] You returned to the original tab
+- [ ] You added a message confirming you came back
+- [ ] You saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

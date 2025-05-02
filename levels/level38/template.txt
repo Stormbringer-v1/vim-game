@@ -2,23 +2,38 @@ WELCOME TO LEVEL 38 — MAKE YOUR OWN COMMAND
 ===========================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Create your own custom Vim command and use it inside a file.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Create a file named `.vimrc_level38` in the project root.
+2. Add the following line:
+
+   command! InsertHeader call append(0, '# Final Report')
+
+3. Save the file and open `header.txt` using this config:
+
+   vim -u .vimrc_level38 header.txt
+
+4. Inside Vim, run your custom command:
+
+   :InsertHeader
+
+   → This should insert `# Final Report` at the very top of the file.
+
+5. Save and quit with:
+
+   :wq
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] `.vimrc_level38` created with correct command  
+- [ ] `# Final Report` was inserted at the top of `header.txt`  
+- [ ] File saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>
-Create .vimrc_level38, define :InsertHeader, use it once on header.txt,
+Create .vimrc_level38, define :InsertHeader, use it once on header.txt,  
 then quit.
 <<END>>

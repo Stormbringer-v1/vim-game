@@ -2,20 +2,23 @@ WELCOME TO LEVEL 0 — HOW TO QUIT VIM
 ====================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Learn how to quit Vim using the proper command.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Look at the text below. You don’t need to change anything.
+2. Press `:` (colon) to enter command mode.
+3. Type `wq` — short for “write and quit.”
+4. Press `Enter` to exit Vim safely.
+
+If you do it right, you'll pass this level.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] You didn’t panic
+- [ ] You typed `:wq` and hit Enter
+- [ ] You exited Vim and completed the level
 
 ────────────────────────────────────────
 <<TASK>>

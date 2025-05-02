@@ -1,21 +1,28 @@
-WELCOME TO LEVEL 32 — FIX ME
-============================
+WELCOME TO LEVEL 32 — FIX MULTIPLE FILES
+========================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Fix three different files, each with a similar issue.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Open and edit each of the following:
+   - `:e fileA.txt`
+   - `:e fileB.txt`
+   - `:e fileC.txt`
+
+2. In each file, fix the word `WRONG` to `RIGHT`.
+
+3. Save all files (`:wa`) and return to this buffer (`:e #`)
+
+4. Exit this file with `:wq`
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All 3 files exist and are fixed
+- [ ] Each `WRONG` changed to `RIGHT`
+- [ ] You returned to this file and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

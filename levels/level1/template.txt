@@ -2,20 +2,21 @@ WELCOME TO LEVEL 1 — VIM BASICS
 ===============================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Delete the word that’s spelled incorrectly — and quit Vim properly.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Press `i` to enter Insert mode.
+2. Move your cursor to the word `DELEETE` and fix or remove it.
+3. Press `Esc` to exit Insert mode.
+4. Type `:wq` and press Enter to save and quit.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] The word `DELEETE` is gone or fixed
+- [ ] You exited Insert mode before quitting
+- [ ] You used `:wq` to save and quit
 
 ────────────────────────────────────────
 <<TASK>>

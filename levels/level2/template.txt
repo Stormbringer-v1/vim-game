@@ -2,20 +2,21 @@ WELCOME TO LEVEL 2 — DELETING LINES
 ===================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Delete the noisy line from the text block — and save your changes.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Press `Esc` to ensure you're in Normal mode.
+2. Move the cursor to the line that says `NOISE_NOISE_NOISE`.
+3. Press `dd` to delete the entire line.
+4. Type `:wq` and press Enter to save and quit.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] The noisy line is completely gone
+- [ ] The good lines are untouched
+- [ ] You saved and exited with `:wq`
 
 ────────────────────────────────────────
 <<TASK>>

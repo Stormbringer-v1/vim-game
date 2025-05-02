@@ -2,20 +2,24 @@ WELCOME TO LEVEL 5 — UNDO AND REDO
 ==================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Delete the noisy line — and experiment with undo and redo before saving.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Move to the line that says `sdklfjskldfj`.
+2. Press `dd` to delete it.
+3. Press `u` to undo, and check that it comes back.
+4. Press `Ctrl-r` to redo the deletion.
+5. Once you're satisfied, press `:wq` to save and quit.
+
+Tip: Undo and redo are your best friends — learn them early!
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] You deleted the noisy line
+- [ ] You undid and redid the action using `u` and `Ctrl-r`
+- [ ] You saved and quit Vim properly
 
 ────────────────────────────────────────
 <<TASK>>

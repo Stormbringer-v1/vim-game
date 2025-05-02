@@ -2,20 +2,25 @@ WELCOME TO LEVEL 16 — NAMED REGISTERS
 =====================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use named registers to copy and duplicate important lines.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Use `"aY` to yank the `First important line` into register `a`.
+2. Use `"bY` to yank the `Second important line` into register `b`.
+3. Move to the end of the file.
+4. Paste each line again using `"ap` and `"bp`.
+5. Save and quit with `:wq`.
+
+Tip: Named registers let you copy/paste multiple things at once — super useful.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] You used `"a` and `"b` to yank/paste
+- [ ] Each important line appears **twice**
+- [ ] Random text was left untouched
+- [ ] You saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

@@ -1,21 +1,24 @@
-WELCOME TO LEVEL 13 — FIX ME
-============================
+WELCOME TO LEVEL 13 — THE CURSED LEVEL
+======================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Fix all the typos — but without using arrow keys or backspace. Seriously.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. You cannot use the arrow keys or backspace — they’ve been disabled.
+2. Use `h`, `l`, `w`, `b`, `e` to move between and inside words.
+3. Correct the spelling mistakes using commands like `r`, `cw`, `s`, or even `R`.
+4. Press `:wq` when everything looks good.
+
+Tip: Don’t panic. You’re not stuck — you're just leveling up.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All typos are fixed (`Thes`, `smaple`, `txt`, `lcuk`)
+- [ ] You didn’t rely on arrow keys or backspace
+- [ ] You exited successfully with `:wq`
 
 ────────────────────────────────────────
 <<TASK>>

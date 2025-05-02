@@ -2,26 +2,35 @@ WELCOME TO LEVEL 44 — TURN TODOs INTO CHECKBOXES
 ================================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Convert all TODO items into markdown-style checkboxes — leave everything else untouched.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Use Vim's search-and-replace to convert lines like:  
+   `TODO: Buy milk`  
+   into:  
+   `- [ ] Buy milk`
+
+2. Use this substitution command:
+
+   :%s/^TODO: /- [ ] /
+
+3. Double-check that the non-TODO line stays the same.
+
+4. Save and quit with `:wq`
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All TODOs converted to `- [ ]` checkboxes  
+- [ ] Other lines are unchanged  
+- [ ] File saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>
-TODO: Buy milk
-TODO: Write report
-TODO: Book flights
-A regular line that should stay unchanged
-TODO: Call Alice
+TODO: Buy milk  
+TODO: Write report  
+TODO: Book flights  
+A regular line that should stay unchanged  
+TODO: Call Alice  
 <<END>>

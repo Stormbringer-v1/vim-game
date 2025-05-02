@@ -2,20 +2,23 @@ WELCOME TO LEVEL 8 — SPLIT WINDOWS IN VIM
 =========================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use horizontal window splitting to edit another file side-by-side.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Type `:split otherside.txt` to open another file in a horizontal split.
+2. Move to the new window using `Ctrl-w ↓` or `Ctrl-w j`.
+3. Type `This is the other side!` in the new file and save with `:w`.
+4. Move back to the original window (`Ctrl-w ↑`) and quit it using `:wq`.
+
+Tip: `:split filename` opens a file below your current one.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] `otherside.txt` was created and saved
+- [ ] It contains the message: `This is the other side!`
+- [ ] You quit from the original file properly
 
 ────────────────────────────────────────
 <<TASK>>

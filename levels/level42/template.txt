@@ -2,26 +2,37 @@ WELCOME TO LEVEL 42 — REGEX CAPTURE GROUPS
 ==========================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use Vim's search-and-replace with capture groups to reformat names.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Reformat each line from `First Last` to `Last, First`
+2. Use the following command inside Vim:
+
+   :%s/\(\w\+\) \(\w\+\)/\2, \1/
+
+3. Verify the result looks like:
+
+   Hopper, Grace  
+   Turing, Alan  
+   Lovelace, Ada  
+   Torvalds, Linus  
+   Hamilton, Margaret
+
+4. Save and quit with `:wq`
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All lines are in `Last, First` format  
+- [ ] Used regex with capture groups  
+- [ ] File saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>
-Grace Hopper
-Alan Turing
-Ada Lovelace
-Linus Torvalds
-Margaret Hamilton
+Grace Hopper  
+Alan Turing  
+Ada Lovelace  
+Linus Torvalds  
+Margaret Hamilton  
 <<END>>

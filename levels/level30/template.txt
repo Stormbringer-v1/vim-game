@@ -1,21 +1,26 @@
-WELCOME TO LEVEL 30 — FIX ME
-============================
+WELCOME TO LEVEL 30 — MULTI-FIX CLEANUP
+=======================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Fix multiple types of issues across structured sections.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Fix all occurrences of `teh` to `the`.
+2. Remove every `TODO_DELETE` line.
+3. Fix `qick`, `errr`, `Speling`, and `errorss`.
+4. Remove the trailing ▶ characters (use `d$`).
+5. Save and quit with `:wq`
+
+Tip: Practice movement commands, substitutions, and smart deletions!
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All typos corrected
+- [ ] All `TODO_DELETE` lines removed
+- [ ] All trailing symbols deleted
+- [ ] You saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

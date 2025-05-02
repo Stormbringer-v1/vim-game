@@ -1,40 +1,49 @@
-WELCOME TO LEVEL 45 — FIX ME
-============================
+WELCOME TO LEVEL 45 — FINAL BOSS: CLEANUP HELL
+==============================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Clean, refactor, and polish a huge mess. You'll need everything you've learned.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Fix all typos of “teh” — in **any casing** — to “the”
+2. Remove **all lines** that contain the word `DEBUG`
+3. Remove all instances of `TODO` — clean the lines but keep the meaning
+4. Remove **extra blank lines** — no more than one empty line at a time
+5. Remove **all trailing whitespace** and **all tabs** — replace with spaces
+6. Preserve section headers and real content — don't overdelete
+
+7. When you're done:  
+   `:wq`
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All `teh` typos fixed  
+- [ ] All `DEBUG` lines fully removed  
+- [ ] All `TODO` markers cleaned out  
+- [ ] No trailing whitespace or tabs remain  
+- [ ] No more than one blank line in a row  
+- [ ] File saved and exited cleanly
 
 ────────────────────────────────────────
 <<TASK>>
-DEBUG session begins
+DEBUG session begins  
 This is teh opening paragraph.	It contains DEBUG noise and a TODO marker.     
   
-## Background
-teh quick brown fox	      
+## Background  
+teh quick brown fox	        
 DEBUG diagnostic here	   
 Another line with trailing spaces.      
 A tabbed	line with TODO to fix.	 
   
-## Long Story
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. TODO update wording.
-Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. DEBUG trace.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+## Long Story  
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. TODO update wording.  
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. DEBUG trace.  
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  
+aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in  
+voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint  
+occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim  
 id est laborum.	     
   
 Blank line below (keep only one!)  
@@ -43,46 +52,45 @@ Blank line below (keep only one!)
 Another paragraph with teh typo multiple times: teh and Teh and tEh.   
 End of long story.      
   
-## Tasks
-- write code
-- Walk the dog
-- buy groceries
-- Attend meeting
-- file taxes
-- clean desk
-- Review PR
-- Plan vacation
-- Fix bug
-- write documentation
-- DEBUG obsolete task
-- TODO add more tasks
-- Organise desk
-- Pay bills
-- Compile report
-- Backup data
-- Update dependencies
-- refactor code
-- Answer emails
-- update resume
+## Tasks  
+- write code  
+- Walk the dog  
+- buy groceries  
+- Attend meeting  
+- file taxes  
+- clean desk  
+- Review PR  
+- Plan vacation  
+- Fix bug  
+- write documentation  
+- DEBUG obsolete task  
+- TODO add more tasks  
+- Organise desk  
+- Pay bills  
+- Compile report  
+- Backup data  
+- Update dependencies  
+- refactor code  
+- Answer emails  
+- update resume  
   
-## Extra Notes
+## Extra Notes  
 Line with tab	and trailing spaces	 	 
 Another DEBUG line.	 
 TODO another item to rewrite.      
   
-## Results
+## Results  
 The experiments show teh system works.  TODO polish phrasing.	 
 DEBUG extra log	 
-Blank lines follow (collapse them)...
-
-
-
-
-## Appendix
+Blank lines follow (collapse them)...  
+  
+  
+  
+## Appendix  
 1)	Tab numbered item with trailing spaces 	 
 2)	Second item with TODO	   
 3)	Third item with DEBUG	  
   
 
-Last line with nothing special.
+Last line with nothing special.  
 <<END>>

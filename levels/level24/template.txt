@@ -2,20 +2,23 @@ WELCOME TO LEVEL 24 — USING MARKS
 =================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use marks to navigate between two important locations.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Move to the line `First important place.` and press `ma` to set mark `a`.
+2. Move to `Second important place.` and press `mb` to set mark `b`.
+3. Now try jumping back to mark `a` with `'a`, then to mark `b` with `'b`.
+4. Save and quit with `:wq`.
+
+Tip: Marks are your bookmarks — great for jumping around long files.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] Marks `a` and `b` were created
+- [ ] You navigated back and forth using `'a` and `'b`
+- [ ] You saved and exited successfully
 
 ────────────────────────────────────────
 <<TASK>>

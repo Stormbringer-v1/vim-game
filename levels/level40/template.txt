@@ -1,24 +1,37 @@
-WELCOME TO LEVEL 40 — FIX ME
-============================
+WELCOME TO LEVEL 40 — MINI-BOSS: PROJECT SETUP
+==============================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Create a small project by writing the exact content for three different files.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Inside Vim, create and save these **three files** with the exact content below:
+
+main.py  
+print("This is the main file.")
+
+utils.py  
+def helper():
+    return "Utility function"
+
+readme.txt  
+Project Description:
+This project contains main and utility files.
+
+2. Once all files are written and saved, return to this level file using `:e #`
+3. Save and quit with `:wq`
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] main.py created with correct content  
+- [ ] utils.py created with correct content  
+- [ ] readme.txt created with correct content  
+- [ ] All files saved, Vim exited properly
 
 ────────────────────────────────────────
 <<TASK>>
-Create main.py, utils.py, readme.txt exactly as shown above,
+Create main.py, utils.py, readme.txt exactly as shown above,  
 meet the three objectives, then quit Vim.
 <<END>>

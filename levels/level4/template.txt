@@ -2,20 +2,23 @@ WELCOME TO LEVEL 4 — SEARCHING FOR TEXT
 =======================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Search for the misspelled word and fix it using Vim's search tools.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Press `/` and type `FAILD` to search for the typo.
+2. Press `n` to jump to the next match (if needed).
+3. Use `r`, `cw`, or `R` to fix the word to `FAILED`.
+4. Press `Esc`, then type `:wq` and press Enter to save and quit.
+
+Tip: Try not to scroll manually — practice the search flow.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] You searched using `/FAILD`
+- [ ] The typo is corrected
+- [ ] You saved and exited cleanly
 
 ────────────────────────────────────────
 <<TASK>>

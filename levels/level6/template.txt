@@ -1,21 +1,24 @@
-WELCOME TO LEVEL 6 — FIX ME
-===========================
+WELCOME TO LEVEL 6 — FIND & FIX TYPOS
+=====================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Fix the repeated spelling mistake throughout the text.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Use `/appple` to search for the typo.
+2. Use `n` to move to the next match.
+3. Fix each instance manually (`r`, `cw`, or `R`) — or use `:%s/appple/apple/g` to fix all at once.
+4. Press `:wq` and Enter to save and quit.
+
+Tip: Try both methods — search + manual fix or full substitution.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All instances of `appple` are corrected to `apple`
+- [ ] Nothing else was changed by mistake
+- [ ] You saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

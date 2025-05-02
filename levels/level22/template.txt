@@ -1,21 +1,24 @@
-WELCOME TO LEVEL 22 — FIX ME
-============================
+WELCOME TO LEVEL 22 — CLEANING UP TODOS
+=======================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Replace every `TODO` with `DONE`, using your preferred method.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Use `:g/TODO` to find relevant lines.
+2. Option A: Manually edit each line (`cw` over `TODO`).
+3. Option B: Use substitution: `:%s/TODO/DONE/g`
+4. Save and quit with `:wq`.
+
+Tip: Use substitution when you know exactly what you're replacing.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All `TODO`s replaced with `DONE`
+- [ ] Other content left untouched
+- [ ] File saved and exited correctly
 
 ────────────────────────────────────────
 <<TASK>>

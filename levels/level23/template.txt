@@ -2,20 +2,24 @@ WELCOME TO LEVEL 23 — TEXT OBJECT MAGIC
 =======================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use Vim's text objects to edit inside quotes and parentheses efficiently.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Move to the word `OLD` inside the quotes.
+2. Press `ci"` to change the content inside the quotes — replace it with `NEW`.
+3. Move to the text inside `(remove me)` and press `di(` to delete everything inside the parentheses.
+4. Save and quit with `:wq`.
+
+Tip: Try `ci"` = "change inside quotes", `di(` = "delete inside parentheses".
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] `"OLD"` changed to `"NEW"`
+- [ ] Text inside `(remove me)` is gone
+- [ ] Everything else is unchanged
+- [ ] Saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

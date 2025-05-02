@@ -1,27 +1,33 @@
-WELCOME TO LEVEL 39 — FIX ME
-============================
+WELCOME TO LEVEL 39 — REMOVE PREFIXES
+=====================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Clean up the list by removing the `>>>` prefix from every task — but leave the “Done” line untouched.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Use a search-and-replace command to remove `>>>` from the beginning of lines:
+
+   :%s/^>>>//
+
+2. Double-check that the “Done line” was not changed (it shouldn't have `>>>`)
+
+3. Save and quit with:
+
+   :wq
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All `>>>` prefixes removed  
+- [ ] The “Done” line is untouched  
+- [ ] File saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>
->>>Finish report
->>>Review pull request
->>>Book plane tickets
->>>Write blog post
+>>>Finish report  
+>>>Review pull request  
+>>>Book plane tickets  
+>>>Write blog post  
 Done line (should stay unchanged)
 <<END>>

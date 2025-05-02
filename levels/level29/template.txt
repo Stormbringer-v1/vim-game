@@ -2,20 +2,24 @@ WELCOME TO LEVEL 29 — SPELL CHECK
 =================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use Vim's built-in spell check to fix all the errors.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Enable spell check with `:set spell`
+2. Move the cursor to each misspelled word (they’ll be red/underlined).
+3. Use `z=` to open suggestions, and pick the correct one.
+4. Repeat for all lines, then disable spell check with `:set nospell`
+5. Save and quit with `:wq`
+
+Tip: Use `]s` and `[s` to jump to the next/previous misspelling.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All misspellings are fixed
+- [ ] Spell check was enabled and used
+- [ ] You saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

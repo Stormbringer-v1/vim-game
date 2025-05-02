@@ -2,20 +2,23 @@ WELCOME TO LEVEL 15 — ADVANCED GLOBAL COMMANDS
 ==============================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use a global command to delete all lines that contain `REMOVE_ME`.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Type `:g/REMOVE_ME/d` to delete all lines matching the pattern.
+2. Verify that only the good lines remain.
+3. Press `:wq` to save and exit.
+
+Tip: `:g` runs a command on all matching lines — it’s powerful and fast.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All `REMOVE_ME` lines are gone
+- [ ] Other lines are untouched
+- [ ] You used a global command (not manual deletions)
+- [ ] You saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

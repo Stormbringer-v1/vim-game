@@ -2,20 +2,24 @@ WELCOME TO LEVEL 7 — WORKING WITH MULTIPLE FILES
 ================================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Open a new file from within Vim, add some text, and save it.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Press `:e mysecondfile.txt` to open a new file.
+2. Type `This is my second file!` and press `Esc`.
+3. Save the file with `:w`.
+4. Return to the original file with `:e #`.
+5. Press `:wq` to save and quit the current file.
+
+Tip: `:e filename` opens a new file, and `:e #` brings you back to the last one.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] `mysecondfile.txt` was created and saved
+- [ ] It contains the correct message
+- [ ] You returned to the original file and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

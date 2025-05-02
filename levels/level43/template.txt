@@ -1,27 +1,38 @@
-WELCOME TO LEVEL 43 — FIX ME
-============================
+WELCOME TO LEVEL 43 — BULLET POINT MAGIC
+========================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Turn each line into a proper bullet-point list using Visual Block mode or macros.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Visually select all task lines (use `Ctrl+v`, then move down)
+2. Insert `- ` at the start of each line with:
+
+   I- <Esc>
+
+3. Your list should look like:
+
+   - Buy milk  
+   - Arrange meeting  
+   - Write blog post  
+   - Push code to GitHub  
+   - Walk the dog
+
+4. Save and quit with `:wq`
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All tasks prefixed with `- `  
+- [ ] File looks like a clean bullet list  
+- [ ] File saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>
-Buy milk
-Arrange meeting
-Write blog post
-Push code to GitHub
-Walk the dog
+Buy milk  
+Arrange meeting  
+Write blog post  
+Push code to GitHub  
+Walk the dog  
 <<END>>

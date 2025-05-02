@@ -2,20 +2,24 @@ WELCOME TO LEVEL 21 — CODE FOLDING
 ==================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use manual folding to organize each function block in this file.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Move to the line with `BEGIN FUNC`.
+2. Press `zf` and move the cursor down to `END FUNC`, then press `Enter` — this creates a fold.
+3. Repeat for the second function block.
+4. Use `zo` to open folds and `zc` to close them.
+5. Save and quit with `:wq`.
+
+Tip: Manual folds are helpful for visual structure — and fully under your control.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] Two folds were created successfully
+- [ ] You used `zf` and practiced `zo` / `zc`
+- [ ] You saved and exited cleanly
 
 ────────────────────────────────────────
 <<TASK>>

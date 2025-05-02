@@ -2,23 +2,36 @@ WELCOME TO LEVEL 35 — YOUR FIRST AUTOCOMMAND
 ============================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Set up your first autocommand to automatically log a message on file save.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Create a file named `.vimrc_level35` in the project directory.
+2. Add the following content:
+
+   augroup L35  
+     autocmd!  
+     autocmd BufWritePost log.txt call append(line('$'), '# SAVED')  
+   augroup END
+
+3. Save `.vimrc_level35`
+4. Open Vim using:
+
+   vim -u .vimrc_level35 log.txt
+
+5. Write anything into `log.txt` and save the file (`:w`)
+6. The line `# SAVED` should be appended automatically
+7. Quit with `:wq`
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] .vimrc_level35 created with correct autocommand  
+- [ ] `# SAVED` is added to log.txt  
+- [ ] File saved and exited cleanly
 
 ────────────────────────────────────────
 <<TASK>>
-Create .vimrc_level35 with the autocommand above, save log.txt once,
-and quit.  The checker will pass when log.txt ends with  # SAVED.
+Create .vimrc_level35 with the autocommand above, save log.txt once,  
+and quit. The checker will pass when log.txt ends with `# SAVED`.
 <<END>>

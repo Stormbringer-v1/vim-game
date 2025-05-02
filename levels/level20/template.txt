@@ -1,21 +1,25 @@
-WELCOME TO LEVEL 20 — FIX ME
-============================
+WELCOME TO LEVEL 20 — THE CLEANUP CREW
+=======================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Clean up this messy file: fix typos, remove noise, align spacing.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Fix the word `teh` to `the` wherever it appears.
+2. Delete any line with `NOISE_NOISE_NOISE`.
+3. Clean up the trailing `X` markers (use `x` or `d$`).
+4. Save and quit with `:wq`.
+
+Tip: Try using `:g/NOISE/d` and `/teh` to work fast.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All `teh` typos are fixed
+- [ ] All noise lines are deleted
+- [ ] All trailing `X`s are removed
+- [ ] You saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

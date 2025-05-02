@@ -2,20 +2,41 @@ WELCOME TO LEVEL 26 — DIFF TWO FILES INSIDE VIM
 ===============================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use Vim's diff mode to compare and synchronize two files.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Save this file as `file1.txt`:
+   - Press `:w file1.txt`
+
+2. Open a vertical split with an empty buffer:
+   - Press `:vsplit`
+   - Then `:enew` to create a new empty buffer
+
+3. Save the new buffer as `file2.txt`:
+   - Press `:w file2.txt`
+
+4. Switch back to the left (`Ctrl-w h`), select and yank all lines (`ggVGy`)
+
+5. Switch to the right (`Ctrl-w l`), and paste (`p`)
+
+6. Edit one line to introduce a difference
+
+7. Enable diff mode for both:
+   - Type `:windo diffthis`
+
+8. Jump between changes using `]c` or `[c`, and use `:diffget` to pull from the other side
+
+9. Once the files are synced (no differences), write all and quit:
+   - `:wa`
+   - `:qa`
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] `file1.txt` and `file2.txt` were created
+- [ ] A difference was added and resolved using `:diffget`
+- [ ] Files were saved and Vim was exited
 
 ────────────────────────────────────────
 <<TASK>>

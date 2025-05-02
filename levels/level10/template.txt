@@ -2,20 +2,24 @@ WELCOME TO LEVEL 10 — VISUAL MODE EDITING
 =========================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use Visual mode to delete one line and fix another — no Normal mode allowed!
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Move your cursor to the line that says `SELECT_ME`.
+2. Press `V` to enter Visual Line mode and press `d` to delete the whole line.
+3. Move to the line with `OOPS`, press `v` to enter Visual mode, move over the word, and press `c` to change it.
+4. Fix the typo (replace `OOPS` with a correct word), then press `Esc`.
+5. Save and quit with `:wq`.
+
+Tip: Use `V` for whole lines, `v` for parts of a line — very different!
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] `SELECT_ME` line is gone
+- [ ] The word `OOPS` is replaced using Visual mode
+- [ ] You saved and exited cleanly
 
 ────────────────────────────────────────
 <<TASK>>

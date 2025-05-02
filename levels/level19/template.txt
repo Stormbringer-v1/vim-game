@@ -2,20 +2,24 @@ WELCOME TO LEVEL 19 — SESSIONS
 ==============================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Create a new tab, open a file, and save your session to return to later.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Type `:tabnew` and then `:e mytabfile.txt`
+2. Write something into the file (e.g., `Session test content`) and save with `:w`
+3. Save your Vim session with `:mksession! mysession.vim`
+4. Quit Vim with `:qa`
+5. Confirm that `mysession.vim` was created!
+
+Tip: Later, you can run `vim -S mysession.vim` to restore everything.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] You created a new tab and file
+- [ ] Saved content into that file
+- [ ] Saved your session to `mysession.vim`
 
 ────────────────────────────────────────
 <<TASK>>

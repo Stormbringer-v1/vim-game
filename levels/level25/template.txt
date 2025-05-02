@@ -2,20 +2,24 @@ WELCOME TO LEVEL 25 — WINDOW MANAGEMENT
 =======================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Practice creating, navigating, and resizing windows.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Type `:split` to open a horizontal split.
+2. Use `Ctrl-w` + `h/j/k/l` to move between windows.
+3. Resize with `Ctrl-w + >` (grow) and `Ctrl-w + -` (shrink).
+4. You don’t need to edit the text — just practice movement.
+5. Press `:wq` when you're done.
+
+Tip: Use `:vsplit` for vertical layout too!
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] You split the window
+- [ ] You resized and navigated using `Ctrl-w`
+- [ ] You saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

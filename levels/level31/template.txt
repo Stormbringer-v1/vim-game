@@ -2,20 +2,24 @@ WELCOME TO LEVEL 31 — ADVANCED MACROS
 =====================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use a macro to update each line from `TODO:` to `DONE:`.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Move to the first line and start recording: `qa`
+2. Use `^cwDONE` to change the word `TODO`, then press `j`
+3. Stop recording with `q`
+4. Replay with `@a`, or repeat with `@@` until finished
+5. Save and quit with `:wq`
+
+Tip: If you mess up, use `u` to undo and re-record the macro.
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] All lines now begin with `DONE:`
+- [ ] Macro was used to repeat the change
+- [ ] You saved and exited properly
 
 ────────────────────────────────────────
 <<TASK>>

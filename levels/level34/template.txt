@@ -1,28 +1,40 @@
-WELCOME TO LEVEL 34 — FIX ME
-============================
+WELCOME TO LEVEL 34 — ABBREVIATIONS & MAPPINGS
+==============================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Create a custom .vimrc config that defines an insert-mode abbreviation and a function key mapping.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Create a file named `.vimrc_level34` in the project folder.
+2. Add the following lines:
+
+   iabbrev btw by the way  
+   nnoremap <F5> :echo "LEVEL34_OK"<CR>
+
+3. Save the file.
+4. Open this level using your config:
+
+   vim -u .vimrc_level34 levels/level34/template.txt
+
+5. In Insert mode, type: `btw ` — it should expand to `by the way`
+6. Press `<F5>` in Normal mode — it should display `LEVEL34_OK`
+7. Save and quit using `:wq`
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] .vimrc_level34 created with correct content  
+- [ ] btw expands in Insert mode  
+- [ ] <F5> shows LEVEL34_OK  
+- [ ] File saved and exited cleanly
 
 ────────────────────────────────────────
 <<TASK>>
 Create .vimrc_level34 with:
 
-iabbrev btw by the way
-nnoremap <F5> :echo "LEVEL34_OK"<CR>
+iabbrev btw by the way  
+nnoremap <F5> :echo "LEVEL34_OK"<CR>  
 
 Then prove they work, save and quit.
 <<END>>

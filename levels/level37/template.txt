@@ -1,27 +1,34 @@
-WELCOME TO LEVEL 37 — FIX ME
-============================
+WELCOME TO LEVEL 37 — SORTING LINES
+===================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Sort a list of words in alphabetical order using Vim’s built-in sort.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Select all the lines inside the task block using visual mode:  
+   Press `ggVG`
+
+2. Run the sort command:  
+   `:sort`
+
+3. Confirm that the fruit names are now in alphabetical order
+
+4. Save and quit with:  
+   `:wq`
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] Lines are sorted alphabetically (A to Z)  
+- [ ] No lines were lost or duplicated  
+- [ ] File was saved and exited correctly
 
 ────────────────────────────────────────
 <<TASK>>
-banana
-orange
-pear
-apple
-kiwi
+banana  
+orange  
+pear  
+apple  
+kiwi  
 <<END>>

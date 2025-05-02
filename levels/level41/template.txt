@@ -1,24 +1,31 @@
-WELCOME TO LEVEL 41 — FIX ME
-============================
+WELCOME TO LEVEL 41 — COPY WITH REGISTERS
+=========================================
 
 🏆  Mission  
-Complete the following objective to pass this level.
+Use Vim’s `"a` register to yank content from one file and paste it into another.
 
 ────────────────────────────────────────
 📝  Step-by-step
 
-1. Review the task block below
-2. Make the necessary edits
-3. Save and quit Vim with :wq
+1. Open `source.txt` and find the lines that include `COPY_ME`
+2. Yank them using register `"a` (e.g., `"ayy` or `"aY` depending on your method)
+3. Open `dest.txt` with `:e dest.txt`
+4. Paste the content from register `"a` into `dest.txt` using:
+
+   "ap
+
+5. Save and quit `dest.txt` with `:wq`
+
+6. Return to this file and also save and quit with `:wq`
 
 ────────────────────────────────────────
 ✅  Success checklist  
-- [ ] Objective completed
-- [ ] File saved correctly
-- [ ] Level passes checker
+- [ ] Lines were copied from `source.txt` using `"a`  
+- [ ] Lines were pasted into `dest.txt` using `"ap`  
+- [ ] Both files saved and closed properly
 
 ────────────────────────────────────────
 <<TASK>>
-source.txt          →  COPY_ME lines live here first
-dest.txt            →  must receive those lines via register "a"
+source.txt          →  COPY_ME lines live here first  
+dest.txt            →  must receive those lines via register "a"  
 <<END>>
