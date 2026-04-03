@@ -1,0 +1,1 @@
+Use :e mysecondfile.txt to create a new file. Enter insert mode, type the required text, and :wq.

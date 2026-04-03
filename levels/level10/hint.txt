@@ -1,0 +1,2 @@
+Use V to enter Visual Line mode, select the lines you need to remove, then press d.
+For single words, use / to search and then dw or x to delete.

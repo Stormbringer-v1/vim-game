@@ -1,0 +1,2 @@
+Arrow keys and backspace are disabled! Use h/j/k/l to move and x to delete characters.
+Use cw to change a word, or r to replace a single character.

@@ -1,0 +1,1 @@
+Use /MISTAEK to search for the typo. Then use i to enter Insert mode and fix it.

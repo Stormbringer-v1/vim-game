@@ -1,0 +1,1 @@
+Use i to enter Insert mode, fix the typo, then press Escape and type :wq to save and quit.

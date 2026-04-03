@@ -1,0 +1,1 @@
+Use :g/BAD LINE/d to delete all lines matching "BAD LINE" at once. Then :wq.

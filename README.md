@@ -27,4 +27,16 @@ We cover everything from:
    ```bash
    git clone https://github.com/Stormbringer-v1/vim-game.git
    cd vim-game
-   ./play.sh 
+   ```
+
+2. Start playing:
+   ```bash
+   ./play.sh
+   ```
+
+3. Other commands:
+   ```bash
+   ./play.sh hint 5      # Get a hint for level 5
+   ./play.sh replay 5    # Replay a specific level
+   ./play.sh reset       # Reset all progress
+   ```

@@ -1,0 +1,1 @@
+Navigate to the junk line and press dd to delete it. Save with :wq.

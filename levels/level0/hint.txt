@@ -1,0 +1,2 @@
+To quit Vim, press Escape first, then type :q and press Enter.
+If Vim complains about unsaved changes, use :q! to force quit.
