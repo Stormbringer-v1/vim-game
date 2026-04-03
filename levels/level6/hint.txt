@@ -1,0 +1,1 @@
+Use :%s/appple/apple/g to replace all occurrences at once. Then :wq.

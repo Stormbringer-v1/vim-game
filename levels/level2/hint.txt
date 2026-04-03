@@ -1,0 +1,1 @@
+Move to the noisy line and press dd to delete the entire line. Then :wq to save.

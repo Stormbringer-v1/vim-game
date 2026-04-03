@@ -10,6 +10,45 @@ if [[ "${1:-}" == "reset" ]]; then
   exit 0
 fi
 
+if [[ "${1:-}" == "replay" ]]; then
+  if [[ -z "${2:-}" ]]; then
+    echo "Usage: ./play.sh replay <level>"
+    echo "Example: ./play.sh replay 5"
+    exit 1
+  fi
+  REPLAY_LEVEL="$2"
+  if [[ ! -d "levels/level${REPLAY_LEVEL}" ]]; then
+    echo "❌ Level ${REPLAY_LEVEL} does not exist."
+    exit 1
+  fi
+  echo "🔄 Replaying Level ${REPLAY_LEVEL}..."
+fi
+
+if [[ "${1:-}" == "hint" ]]; then
+  if [[ -z "${2:-}" ]]; then
+    echo "Usage: ./play.sh hint <level>"
+    echo "Example: ./play.sh hint 5"
+    exit 1
+  fi
+  HINT_FILE="levels/level${2}/hint.txt"
+  if [[ -f "$HINT_FILE" ]]; then
+    echo "💡 Hint for Level ${2}:"
+    cat "$HINT_FILE"
+  else
+    echo "No hint available for Level ${2}."
+  fi
+  exit 0
+fi
+
+
+# Show hint suggestion on failure
+show_hint_tip() {
+  local LEVEL=$1
+  local HINT_FILE="levels/level${LEVEL}/hint.txt"
+  if [[ -f "$HINT_FILE" ]]; then
+    echo "💡 Need help? Run: ./play.sh hint $LEVEL"
+  fi
+}
 
 # Helper function to run a level
 run_level() {
@@ -621,6 +660,17 @@ fi
 
   rm "$TMP_FILE"
 
+  # Show hint tip if the level was not completed
+  local KEY
+  if [[ "$LEVEL" == boss* ]]; then
+    KEY="${LEVEL}=completed"
+  else
+    KEY="level${LEVEL}=completed"
+  fi
+  if ! grep -q "$KEY" progress.log; then
+    show_hint_tip "$LEVEL"
+  fi
+
 # New: ask if continue
 read -p "👉 Do you want to continue to the next level? (y/N): " CONTINUE
 if [[ "$CONTINUE" == "y" || "$CONTINUE" == "Y" ]]; then
@@ -634,108 +684,47 @@ fi
 
 }
 
+# ── Level order ──
+LEVEL_ORDER=(
+  0 1 2 3 4 5 6 7 8 9 10
+  boss01
+  11 12 13 14 15 16 17 18 19 20
+  21 22 23 24 25 26 27 28 29 30
+  31 32 33 34 35 36 37 38 39 40
+  41 42 43 44 45
+)
+
+# Helper: get the progress key for a level
+progress_key() {
+  local lvl=$1
+  if [[ "$lvl" == boss* ]]; then
+    echo "${lvl}=completed"
+  else
+    echo "level${lvl}=completed"
+  fi
+}
+
 # ── Main logic ──
-while true; do
-if ! grep -q "level0=completed" progress.log; then
-  run_level 0
-elif ! grep -q "level1=completed" progress.log; then
-  run_level 1
-elif ! grep -q "level2=completed" progress.log; then
-  run_level 2
-elif ! grep -q "level3=completed" progress.log; then
-  run_level 3
-  elif ! grep -q "level4=completed" progress.log; then
-  run_level 4
-elif ! grep -q "level5=completed" progress.log; then
-  run_level 5
-elif ! grep -q "level6=completed" progress.log; then
-  run_level 6
-elif ! grep -q "level7=completed" progress.log; then
-  run_level 7    
-elif ! grep -q "level8=completed" progress.log; then
-  run_level 8  
-elif ! grep -q "level9=completed" progress.log; then
-  run_level 9
-elif ! grep -q "level10=completed" progress.log; then
-  run_level 10
-elif ! grep -q "boss01=completed" progress.log; then
-  run_level boss01
-elif ! grep -q "level11=completed" progress.log; then
-  run_level 11
-elif ! grep -q "level12=completed" progress.log; then
-  run_level 12
-elif ! grep -q "level13=completed" progress.log; then
-  run_level 13
-elif ! grep -q "level14=completed" progress.log; then
-  run_level 14
-elif ! grep -q "level15=completed" progress.log; then
-  run_level 15
-elif ! grep -q "level16=completed" progress.log; then
-  run_level 16
-elif ! grep -q "level17=completed" progress.log; then
-  run_level 17
-elif ! grep -q "level18=completed" progress.log; then
-  run_level 18
-elif ! grep -q "level19=completed" progress.log; then
-  run_level 19
-elif ! grep -q "level20=completed" progress.log; then
-  run_level 20
-elif ! grep -q "level21=completed" progress.log; then
-  run_level 21
-elif ! grep -q "level22=completed" progress.log; then
-  run_level 22
-elif ! grep -q "level23=completed" progress.log; then
-  run_level 23
-elif ! grep -q "level24=completed" progress.log; then
-  run_level 24
-elif ! grep -q "level25=completed" progress.log; then
-  run_level 25
-  elif ! grep -q "level26=completed" progress.log; then
-  run_level 26
-elif ! grep -q "level27=completed" progress.log; then
-  run_level 27
-elif ! grep -q "level28=completed" progress.log; then
-  run_level 28
-elif ! grep -q "level29=completed" progress.log; then
-  run_level 29
-elif ! grep -q "level30=completed" progress.log; then
-  run_level 30
-elif ! grep -q "level31=completed" progress.log; then
-  run_level 31
-elif ! grep -q "level32=completed" progress.log; then
-  run_level 32
-elif ! grep -q "level33=completed" progress.log; then
-  run_level 33
-elif ! grep -q "level34=completed" progress.log; then
-  run_level 34
-elif ! grep -q "level35=completed" progress.log; then
-  run_level 35
-elif ! grep -q "level36=completed" progress.log; then
-  run_level 36
-elif ! grep -q "level37=completed" progress.log; then
-  run_level 37
-elif ! grep -q "level38=completed" progress.log; then
-  run_level 38
-elif ! grep -q "level39=completed" progress.log; then
-  run_level 39
-elif ! grep -q "level40=completed" progress.log; then
-  run_level 40
-elif ! grep -q "level41=completed" progress.log; then
-  run_level 41
-elif ! grep -q "level42=completed" progress.log; then
-  run_level 42
-  elif ! grep -q "level43=completed" progress.log; then
-  run_level 43
-elif ! grep -q "level44=completed" progress.log; then
-  run_level 44
-elif ! grep -q "level45=completed" progress.log; then
-  run_level 45
 
-
-else
-  echo "🎉 Congratulations! You finished all available levels!"
-  echo "If you want to start again, type './play.sh reset' "
-exit 0
+# Handle replay mode: run one level and exit
+if [[ -n "${REPLAY_LEVEL:-}" ]]; then
+  run_level "$REPLAY_LEVEL"
+  exit 0
 fi
 
+while true; do
+  FOUND=0
+  for LVL in "${LEVEL_ORDER[@]}"; do
+    if ! grep -q "$(progress_key "$LVL")" progress.log; then
+      run_level "$LVL"
+      FOUND=1
+      break
+    fi
+  done
+
+  if [[ $FOUND -eq 0 ]]; then
+    echo "🎉 Congratulations! You finished all available levels!"
+    echo "If you want to start again, type './play.sh reset' "
+    exit 0
+  fi
 done 

@@ -1,0 +1,2 @@
+Use :vsplit otherside.txt or :split otherside.txt to create a split with a new file.
+Type the required text and save both files with :wa then :qa.

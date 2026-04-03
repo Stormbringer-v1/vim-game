@@ -1,0 +1,5 @@
+This combines earlier skills. Use:
+- dd to delete noisy lines
+- /MISTAEK and cw to fix typos
+- :%s/appple/apple/g for bulk replacements
+Take it one task at a time!

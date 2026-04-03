@@ -1,0 +1,1 @@
+Use /FAILD to find the typo. Press cw (change word) to replace it, then Escape and :wq.
